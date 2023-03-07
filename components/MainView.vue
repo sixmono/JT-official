@@ -9,7 +9,7 @@
       <el-row>
         <el-col
           v-for="(o, index) in 4"
-          :key="o"
+          :key="index"
           :span="5"
           :offset="index > 0 ? 2 : 0"
           style="text-align: center"
@@ -17,7 +17,6 @@
           <el-card :body-style="{ padding: '0px' }">
             <img
               src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
-              class="image"
               style="width: 100%"
             />
             <div style="padding: 14px">
@@ -320,6 +319,7 @@ const NewList = ref([
 
 .el-row {
   display: flex;
+  justify-content: space-around;
 }
 /* 走马灯效果 */
 .el-carousel__item h3 {
@@ -337,9 +337,7 @@ const NewList = ref([
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
 }
-.el-row {
-  justify-content: space-around;
-}
+
 /* 主体部分样式 */
 .el-main {
   --el-main-padding: 20px 0 0 0;
