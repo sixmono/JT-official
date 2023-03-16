@@ -1,28 +1,29 @@
 <template>
   <div class="swap">
-    <div class="swap-both">
-      <div class="swap-logo"><b>疆通科技</b></div>
-      <div class="swap-Navigation">
-        <nav class="swap-Navigation-list">
-          <router-link class="swap-Navigation-list-link" to="/"
-            >首页</router-link
+    <el-row :gutter="0">
+      <el-col :span="12" :xs="24"
+        ><div class="swap-logo"><b>疆通科技</b></div></el-col
+      >
+      <el-col :span="12" :xs="24">
+        <div class="swap-Navigation">
+          <el-menu
+            router
+            :default-active="this.$router.path"
+            class="el-menu-demo"
+            mode="horizontal"
+            background-color="#545c64"
+            text-color="#fff"
+            active-text-color="#ffd04b"
           >
-          <router-link class="swap-Navigation-list-link" to="/AboutUs"
-            >我们</router-link
-          >
-          <router-link class="swap-Navigation-list-link" to="/Service"
-            >业务</router-link
-          >
-          <router-link class="swap-Navigation-list-link" to="/Develop"
-            >优势</router-link
-          >
-          <router-link class="swap-Navigation-list-link" to="/CaSe"
-            >案例</router-link
-          >
-        </nav>
-        <router-view />
-      </div>
-    </div>
+            <el-menu-item index="/">首页</el-menu-item>
+            <el-menu-item index="/AboutUs">我们</el-menu-item>
+            <el-menu-item index="/Service">业务</el-menu-item>
+            <el-menu-item index="/Develop">优势</el-menu-item>
+            <el-menu-item index="/CaSe">案例</el-menu-item>
+          </el-menu>
+          <router-view /></div
+      ></el-col>
+    </el-row>
   </div>
 </template>
 
@@ -37,6 +38,18 @@ export default {
   padding: 0;
   margin: 0;
 }
+.el-menu-demo {
+  line-height: 80px;
+  position: relative;
+  position: 999;
+}
+.el-menu--horizontal > .el-menu-item {
+  height: 80px;
+  line-height: 80px;
+  width: 80px;
+  font-size: 16px;
+  text-align: center;
+}
 .el-header {
   padding: 0;
   z-index: 999;
@@ -50,18 +63,13 @@ export default {
   height: 80px;
   background-color: #545c64;
 }
-.swap-both {
-  display: flex;
-  justify-content: space-between;
-}
+
 .swap-logo {
   font-size: 30px;
-  margin-left: 100px;
   line-height: 80px;
+  text-align: center;
 }
-.swap-Navigation {
-  margin-right: 100px;
-}
+
 .swap-Navigation-list-link {
   width: 80px;
   height: 80px;
@@ -70,7 +78,7 @@ export default {
   display: inline-flex;
   list-style-type: none;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .swap-Navigation-list-link :hover {
   border-bottom: 1px solid red;

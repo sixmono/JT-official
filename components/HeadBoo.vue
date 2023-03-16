@@ -62,6 +62,7 @@ const handleSelect = (key, keyPath) => {
 .header {
   width: 100%;
   position: fixed;
+  color: white;
   z-index: 999;
 }
 .el-row {

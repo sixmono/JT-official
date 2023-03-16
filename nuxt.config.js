@@ -4,9 +4,9 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "nuxtapp",
+    title: "上海疆通科技有限公司",
     htmlAttrs: {
-      lang: "en",
+      lang: "zh",
     },
     meta: [
       { charset: "utf-8" },

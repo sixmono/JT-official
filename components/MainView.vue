@@ -1,20 +1,20 @@
 <template>
   <div class="AboutUs">
-    <div class="AboutUs-swap">
-      <el-carousel indicator-position="outside" style="text-align: center">
+      <!-- <el-carousel indicator-position="outside" style="text-align: center">
         <el-carousel-item v-for="(item, index) in items" :key="index">
           <img :src="require(`../static/logo/${item.img}.png`)" alt="" />
         </el-carousel-item>
-      </el-carousel>
-      <el-row>
+      </el-carousel> -->
+      <!-- <img src="../static/AboutUs/AboutUs.jpg" style="width: 100%;" /> -->
+      <!-- <el-row>
         <el-col
           v-for="(o, index) in 4"
           :key="index"
           :span="5"
           :offset="index > 0 ? 2 : 0"
-          style="text-align: center"
+          style="text-align: center ;margin: 10px 0;"
         >
-          <el-card :body-style="{ padding: '0px' }">
+          <el-card :body-style="{ padding: ' 0' }">
             <img
               src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
               style="width: 100%"
@@ -28,8 +28,24 @@
             </div>
           </el-card>
         </el-col>
-      </el-row>
-      <div class="AboutUs-card">
+      </el-row> -->
+      <!-- <video width="" height="" controls>
+        <source src="../static/Video/AboutUs-Video.mp4" type="">       
+      </video> -->
+      <!-- <video src="../static/Video/AboutUs-Video.mp4" controls /> -->
+      
+    <video
+        src="../static/Video/AboutUs-Video.mp4"
+        width="100%"
+        height="100%"
+        autoplay
+        muted
+        loop
+        style="position:relative;z-index: 1;margin-top: 80px;"
+      ></video>
+
+        <el-row :gutter="0" class="AboutUs-card">
+        <el-col :span="12" :xs="24"> 
         <div class="AboutUs-card-left">
           <span>A B O U T U S</span>
           <h1>公司简介</h1>
@@ -39,14 +55,16 @@
             为用户提供无侵入式的智能化方案，最终为企业实现降本增效的经营目标。
           </div>
         </div>
-        <div class="AboutUs-card-right">
-          <img src="../static/1-211011162153933.jpg" alt="" />
-        </div>
-      </div>
-    </div>
+        </el-col>
+        <el-col :span="12" :xs="24">  
+          <div class="AboutUs-card-right">
+            <img src="../static/1-211011162153933.jpg" alt="" />
+          </div>
+        </el-col>
+      </el-row>
     <div class="AboutUs-hover-card">
-      <el-row justify="space-around">
-        <el-col :span="5">
+      <el-row type="flex" justify="space-around" style="flex-flow: wrap;">
+        <el-col :span="5" :xs="24">
           <el-card class="AboutUs-hover-card-col">
             <div class="AboutUs-hover-card-col-div">
               <h2>200+</h2>
@@ -54,19 +72,19 @@
             </div>
           </el-card>
         </el-col>
-        <el-col :span="5">
+        <el-col :span="5" :xs="24">
           <el-card class="AboutUs-hover-card-col">
             <h2>15个</h2>
             <span>自研产品</span>
           </el-card>
         </el-col>
-        <el-col :span="5">
+        <el-col :span="5" :xs="24">
           <el-card class="AboutUs-hover-card-col">
             <h2>30家</h2>
             <span>合作企业</span>
           </el-card>
         </el-col>
-        <el-col :span="5">
+        <el-col :span="5" :xs="24">
           <el-card class="AboutUs-hover-card-col">
             <h2>200+</h2>
             <span>成功案例</span>
@@ -80,8 +98,8 @@
         <h1>我们的服务</h1>
       </div>
       <div class="AboutUs-ourServices-row">
-        <el-row justify="space-around">
-          <el-col :span="5" v-for="(item, index) in ourServicesList">
+        <el-row type="flex" justify="space-around" style="flex-flow: wrap;">
+          <el-col :span="5" :xs="11" v-for="(item, index) in ourServicesList" >
             <el-card class="AboutUs-ourServices-row-col">
               <h1>{{ item.title }}</h1>
               <span>{{ item.span }}</span>
@@ -96,8 +114,8 @@
         <h1>项目案例展示</h1>
       </div>
       <div class="AboutUs-case-main">
-        <el-row class="AboutUs-case-main-left" justify="space-around">
-          <el-col :span="5">
+        <el-row type="flex" style="flex-flow: wrap;" class="AboutUs-case-main-left" justify="space-around">
+          <el-col :span="4" :xs="24">
             <el-link
               class="AboutUs-case-main-left-link"
               href=""
@@ -105,30 +123,31 @@
               v-for="(item, index) in list"
               :key="index"
             >
-              {{ item.name }}
+             <p> {{ item.name }}</p> </br>
             </el-link>
           </el-col>
-          <el-col :span="13">
-            <el-row justify="space-between" class="AboutUs-case-main-right">
-              <el-col :span="12" v-for="(item, index) in CardList" :key="index">
+          <el-col :span="17" :xs="24">
+            <el-row type="flex" justify="space-around" style="flex-flow: wrap;"  class="AboutUs-case-main-right">
+              <el-col :span="11" :xs="24" v-for="(item, index) in CardList" :key="index">
                 <div class="AboutUs-case-main-right-div">
-                  <img
-                    :src="require(`../static/logo/${item.img}.png`)"
-                    style="width: 50%"
+                    <img
+                    :src="require(`../static/Index/${item.img}.jpg`)"
+                    style="width: 100%;height: 100%;text-align: center;"
                   />
+                
                 </div>
                  <div class="AboutUs-case-main-right-card">
-                    <h4>{{ item.title }}</h4>
+                    <h4 >{{ item.title }}</h4>
                     <p>{{ item.main }}</p>
                   </div>
               </el-col>
             </el-row>
-            <el-row justify="space-between" class="AboutUs-case-main-right">
-              <el-col :span="12" v-for="(item, index) in CardList2" :key="index">
+            <!-- <el-row justify="space-between" class="AboutUs-case-main-right">
+              <el-col :span="10" v-for="(item, index) in CardList2" :key="index">
                 <div class="AboutUs-case-main-right-div">
                   <img
-                    :src="require(`../static/logo/${item.img}.png`)"
-                    style="width: 50%"
+                    :src="require(`../static/Index/${item.img}.jpg`)"
+                    style="width: 100%"
                   />
                 </div>
                 <div class="AboutUs-case-main-right-card">
@@ -136,7 +155,7 @@
                     <p>{{ item.main }}</p>
                   </div>
               </el-col>
-            </el-row>
+            </el-row> -->
           </el-col>
         </el-row>
           </el-col>
@@ -147,19 +166,19 @@
       <div class="AboutUs-news-header">
         <h1>新闻资讯</h1>
         <p class="AboutUs-news-header-p">不同层面的物联网行业解决方案</p>
-        <el-row justify="space-around">
-          <el-col :span="5" v-for="(item, index) in NewList" :key="index">
+        <el-row type="flex" justify="space-around" style="flex-flow: wrap;">
+          <el-col :span="5" :xs="16" v-for="(item, index) in NewList" :key="index">
             <el-card class="AboutUs-news-main-card">
               <div class="AboutUs-news-main-card-main">
-                <img :src="require(`../static/logo/${item.img}.png`)" alt="" />
+                <img :src="require(`../static/Index/${item.img}.jpg`)" style="40%"/>
                 <h3>{{ item.title }}</h3>
                 <span>{{ item.date }}</span>
                 <p>
                   {{ item.main }}
                 </p>
                 <div class="AboutUs-news-main-card-footer">
-                  <button>新闻资讯</button>
-                  <span>→</span>
+                  <button> <a :href="item.href">新闻资讯</a> </button>
+                  <a :href="item.href"><span>→</span></a> 
                 </div>
               </div>
             </el-card></el-col
@@ -250,53 +269,68 @@ const ourServicesList = ref([
 
 const CardList = ref([
   {
-    img: "logo",
+    img: "AboutUs-ourServices1",
     title: "环境管控",
     main: "消毒防疫、节能管控、智能家居",
   },
   {
-    img: "logo",
+    img: "AboutUs-ourServices2",
     title: "AR多媒体",
     main: "AR眼镜远程协助巡检、互动多媒体数字展陈、多媒体教学、远程医疗",
   },
- 
-]);
-const CardList2 = ref([
-   {
-    img: "logo",
+    {
+    img: "AboutUs-ourServices3",
     title: "系统集成",
     main: "数据中心建设、AI场景落地、多源异构、智能化系统维护",
   },
   {
-    img: "logo",
+    img: "AboutUs-ourServices4",
     title: "智能产品研发",
     main: "人脸识别管控系统、智慧养老跌倒系统等、智慧养老定位系统等",
   },
-])
+ 
+]);
+// const CardList2 = ref([
+//    {
+//     img: "AboutUs-ourServices3",
+//     title: "系统集成",
+//     main: "数据中心建设、AI场景落地、多源异构、智能化系统维护",
+//   },
+//   {
+//     img: "AboutUs-ourServices4",
+//     title: "智能产品研发",
+//     main: "人脸识别管控系统、智慧养老跌倒系统等、智慧养老定位系统等",
+//   },
+// ])
 const NewList = ref([
   {
-    img: "logo2",
-    title: "AR眼镜：用科技照亮未来",
-    date: "2023-1-10",
-    main: "2021年9月14日，小米发布小米智能眼镜探索版。概念新品采用MicroLED光波导技术，整机仅重51g，外观与普通眼镜几无区别，可实现基本的通知显示、通话、也可独立",
+    img: "index-footer-card1",
+    title: "科技挽救生命，AR技术让急救加速",
+    date: " 2022-11-04",
+    main: "在急救车内，随车医生佩戴AR眼镜，以第一视角对病患进行抢救，远程联系医院中的医生，让医生及时了解病患情况，对随车医生的急救措施进行指导与辅助，确保将“黄金抢救时间”运用到极致！",
+  href:"https://mp.weixin.qq.com/s/jCJoHY6HYWubBRDqDQaCmA"
+ },
+  {
+    img: "index-footer-card2",
+    title: "我司可协助医疗企业 遵守广审制度 规范广告行为",
+    date: "2022-02-11",
+    main: "上海市市场监督管理局网站日前公布的行政处罚信息显示，上海光正新视界眼科医院投资有限公司发布虚假广告，对其罚款60万元.",
+    href:"https://mp.weixin.qq.com/s/Pi3kn49o9F26mk69ZQPAIA"
   },
   {
-    img: "logo2",
-    title: "AR眼镜：用科技照亮未来",
-    date: "2023-1-10",
-    main: "2021年9月14日，小米发布小米智能眼镜探索版。概念新品采用MicroLED光波导技术，整机仅重51g，外观与普通眼镜几无区别，可实现基本的通知显示、通话、也可独立",
-  },
+    img: "index-footer-card3",
+    title: "警惕！习惯性违章的13种“危险人”!",
+    date: " 2021-12-10",
+    main: "未穿戴劳保用品、不设置警戒线、酒后上岗……还记得那些发生在我们身边的不安全行为吗？",
+    href:"https://mp.weixin.qq.com/s/FI6460BUu3VJXNMbRf2AIg"
+ },
   {
-    img: "logo2",
-    title: "AR眼镜：用科技照亮未来",
-    date: "2023-1-10",
-    main: "2021年9月14日，小米发布小米智能眼镜探索版。概念新品采用MicroLED光波导技术，整机仅重51g，外观与普通眼镜几无区别，可实现基本的通知显示、通话、也可独立",
-  },
-  {
-    img: "logo2",
-    title: "AR眼镜：用科技照亮未来",
-    date: "2023-1-10",
-    main: "2021年9月14日，小米发布小米智能眼镜探索版。概念新品采用MicroLED光波导技术，整机仅重51g，外观与普通眼镜几无区别，可实现基本的通知显示、通话、也可独立",
+    img: "index-footer-card4",
+    title: "Facebook改名Meta，高端MR头显明年发布",
+    date: " 2021-10-29",
+    main: "北京时间10月29日凌晨1点，2021年Facebook Connect大会正式开幕。会上，Facebook首席执行官马克·扎克伯格宣布Facebook将改名为Meta，原Facebook旗下所有应用和技术都将整合到新公司品牌中。",
+    href:"https://mp.weixin.qq.com/s/2kLsj-UUEEyvoK4jS4vd_g"
+
   },
 ]);
 </script>
@@ -317,9 +351,12 @@ const NewList = ref([
 
 <style lang="scss" scoped>
 
-.el-row {
-  display: flex;
-  justify-content: space-around;
+// .el-row {
+//   display: flex;
+//   justify-content: space-around;
+// }
+.el-header{
+  height: 80px;
 }
 /* 走马灯效果 */
 .el-carousel__item h3 {
@@ -351,18 +388,14 @@ const NewList = ref([
   background-color: #0d0d0d;
   /* 公司简介 */
   &-card {
-    width: 100%;
-    height: 300px;
     background-color: #0d0d0d;
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0 0 0;
+    margin: 0;
     &-left {
-      width: 20%;
+      width: 80%;
       margin-top: 20px;
-      padding-left: 20%;
       line-height: 30px;
       color: #969696;
+      margin: 0 auto;
     }
     &-left h1,
     .case-header h1,
@@ -370,6 +403,7 @@ const NewList = ref([
       margin: 0;
       font-size: 36px;
       font-weight: 300;
+      margin: 20px 0;
     }
     &-left span,
     .case-header span,
@@ -378,33 +412,32 @@ const NewList = ref([
     }
 
     &-right {
-      margin-left: 20px;
-      margin-top: 20px;
       line-height: 300px;
       vertical-align: middle;
       text-align: center;
-      padding-right: 20%;
     }
     &-right img {
-      width: 60%;
+      width: 90%;
     }
   }
 
   /* 我们的服务 */
   &-hover-card {
+    flex-flow: wrap;
+		align-items: center;
     margin: 20px auto 0;
+      &-col {
+        width: 260px;
+        height: 200px;
+        background-color: #1c1c1c;
+        color: #fff;
+        border: 1px;
+        margin: 10px auto;
+         display: flex;
+         justify-content: center;
+        text-align: center;
 
-    &-col {
-      width: 260px;
-      height: 200px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      background-color: #1c1c1c;
-      color: #fff;
-      border: 1px;
-      margin: 0 auto;
+        align-items: center;
     }
     &-col:hover {
       transform: scale(1.1, 1.1);
@@ -417,6 +450,7 @@ const NewList = ref([
     color: #fff;
     margin-top: 20px;
     text-align: center;
+    
     &-row {
       margin: 30px 10px;
       &-col {
@@ -425,10 +459,10 @@ const NewList = ref([
         transition: all 0.5;
         display: flex;
         justify-content: center;
-        flex-direction: column;
         align-items: center;
         background: url("../static/Our/Our.jpg");
         border: none;
+        margin: 10px 0;
         h1,
         span {
           color: white;
@@ -458,17 +492,15 @@ const NewList = ref([
           margin-top: 20px;
           text-align: center;
         }
-        &-card,
-        &-card2 {
+        &-card
+         {
           // background-color: greenyellow;
-          color: white;
+          color: #969696;
+          h4{
+            font-size: 24px;
+
+          }
         }
-        // &-card:hover,
-        // &-card2:hover {
-        //   position: absolute;
-        //   top: 50%;
-        //   height: 400px;
-        // }
       }
     }
   }
@@ -488,30 +520,34 @@ const NewList = ref([
   &-news-main-card {
     text-align: center;
     margin-bottom: 20px;
+    position: relative;
     &-main {
       padding: 10px 16px;
       text-align: left;
       padding: 10px;
       transition: all 1;
+      height: 440px;
       img {
         text-align: center;
         width: 100%;
       }
       img:hover {
-        transform: scale(1.1, 1.1);
+        // transform: scale(1.1, 1.1);
       }
     }
     &-footer {
-      margin-top: 20px;
-      padding: 0 10px;
+      color: #969696;
+              position: absolute;
+               bottom: 0;
+        margin-bottom: 20px;
+
       button {
         float: left;
-        margin-bottom: 20px;
+        left: 20px;
       }
       span {
         float: right;
-        margin-bottom: 20px;
-        transform: scale(1.1, 1.1);
+        margin-left: 170px;
       }
     }
   }

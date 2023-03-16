@@ -8,62 +8,100 @@
         <BannerView>
           <img src="../static/Banner/Develop.jpg" />
         </BannerView>
-        <h1 class="Develop-h1">核心优势</h1>
+        <h1 class="Develop-h1">企业资质</h1>
 
         <div class="Develop-card">
           <div class="Develop-card-top">
-            <el-row justify="space-around">
-              <el-col :span="7" class="Develop-card-top-left">
-                <h4>| 多个跨行业系统集成项目案例 |</h4>
-                <el-row justify="space-around" class="Develop-card-top-left-row">
-                  <el-col :span="7" v-for="item in List" :key="item">
-                    <img :src="require(`../static/logo/${item.img}.png`)" />
-                    <p>{{ item.title }}</p>
-                  </el-col>
-                </el-row>
-              </el-col>
-              <el-col :span="7">
+            <el-row
+              type="flex"
+              justify="space-around"
+              style="text-align: center; margin: 0 auto; flex-flow: wrap"
+            >
+              <el-col
+                :span="10"
+                :xs="20"
+                class="Develop-card-left"
+                style="margin: 0 20px"
+              >
                 <div>
-                  <h4>| 覆盖全国的专业服务团队 |</h4>
+                  <h4>| 多个跨行业系统集成项目证书 |</h4>
+                  <el-row
+                    type="flex"
+                    style="flex-flow: wrap"
+                    justify="space-around"
+                    class="Develop-card-left-row"
+                  >
+                    <el-col
+                      :span="7"
+                      v-for="(item, index) in List"
+                      :key="index"
+                    >
+                      <img
+                        :src="require(`../static/Develop/${item.img}.png`)"
+                      />
+                      <p>{{ item.title }}</p>
+                    </el-col>
+                  </el-row>
                 </div>
               </el-col>
+              <!-- <el-col
+                :span="7"
+                :xs="20"
+                class="Develop-card-left"
+                style="margin: 0 20px"
+              >
+                <div>
+                  <h4>| 覆盖全国的专业服务团队 |</h4>
+
+                </div>
+              </el-col> -->
             </el-row>
           </div>
-
           <el-row class="Develop-card-bottom" justify="space-around">
-            <el-col :span="7">
-              <h4>| 物联网设备自主定制研发 |</h4>
-              <el-row justify="space-around" class="Develop-card-bottom-left">
+            <el-col :span="7" :xs="20" style="margin: 0 20px; height: 340px">
+              <h4>| 合作院校以及获得证书 |</h4>
+              <el-row
+                type="flex"
+                justify="space-around"
+                style="flex-flow: wrap"
+                class="Develop-card-bottom-left"
+              >
                 <el-col
                   :span="10"
-                  v-for="item in bottomLeftList"
-                  :key="item"
+                  v-for="(item, index) in bottomLeftList"
+                  :key="index"
                   class="Develop-card-bottom-left-col"
                 >
                   <div style="height: 20%">
-                    <img :src="require(`../static/logo/${item.img}.png`)" />
+                    <img :src="require(`../static/Develop/${item.img}.png`)" />
                     <p>{{ item.title }}</p>
                   </div>
                 </el-col>
               </el-row>
             </el-col>
-            <el-col :span="7">
-              <h4>| 人工智能自有知识产权算法 |</h4>
+            <el-col :span="7" :xs="20" style="margin: 0 20px; height: 340px">
+              <h4>| 人工智能自有知识产权证书 |</h4>
               <el-row justify="space-around" class="Develop-card-bottom-center">
                 <el-col :span="24">
                   <img src="../static/Develop/Develop-bottom-center.png" />
+                  <p style="margin-bottom: 20px">软著证书</p>
                 </el-col>
               </el-row>
             </el-col>
-            <el-col :span="7">
+            <el-col :span="7" :xs="20" style="margin: 0 20px; height: 340px">
               <h4>| 云平台无缝整合第三方产品 |</h4>
               <el-row
-                :gutter="20"
-                justify="space-between"
+                type="flex"
+                style="flex-flow: wrap"
+                justify="space-around"
                 class="Develop-card-bottom-right"
               >
-                <el-col :span="7" v-for="item in bottomRightList" :key="item">
-                  <img :src="require(`../static/logo/${item.img}.png`)" />
+                <el-col
+                  :span="7"
+                  v-for="(item, index) in bottomRightList"
+                  :key="index"
+                >
+                  <img :src="require(`../static/Develop/${item.img}.jpg`)" />
                 </el-col>
               </el-row>
             </el-col>
@@ -88,83 +126,68 @@ export default {
     return {
       List: [
         {
-          img: "logo2",
-          title: "金融",
+          img: "Develop1",
         },
         {
-          img: "logo2",
-          title: "金融",
+          img: "Develop2",
         },
         {
-          img: "logo2",
-          title: "金融",
+          img: "Develop3",
         },
         {
-          img: "logo3",
-          title: "金融",
+          img: "Develop4",
         },
         {
-          img: "logo3",
-          title: "金融",
+          img: "Develop5",
         },
         {
-          img: "logo3",
-          title: "金融",
+          img: "Develop6",
         },
         {
-          img: "logo4",
-          title: "金融",
+          img: "Develop7",
         },
         {
-          img: "logo4",
-          title: "金融",
+          img: "Develop8",
         },
         {
-          img: "logo4",
-          title: "金融",
+          img: "Develop9",
         },
       ],
       bottomLeftList: [
         {
-          img: "logo",
-          title: "只能人脸机",
+          img: "Develop10",
+          title: "合作院校",
         },
         {
-          img: "logo3",
-          title: "AR软件",
+          img: "Develop11",
+          title: "荣誉证书",
         },
         {
-          img: "logo3",
-          title: "软件平台",
+          img: "Develop12",
+          title: "荣誉证书",
         },
       ],
       bottomRightList: [
         {
-          img: "logo3",
+          img: "Develop-footer-cooperative-partner",
         },
         {
-          img: "logo3",
+          img: "Develop-footer-cooperative-partner2",
         },
         {
-          img: "logo3",
+          img: "Develop-footer-cooperative-partner3",
         },
         {
-          img: "logo3",
+          img: "Develop-footer-cooperative-partner4",
         },
         {
-          img: "logo3",
+          img: "Develop-footer-cooperative-partner5",
         },
         {
-          img: "logo3",
+          img: "Develop-footer-cooperative-partner6",
         },
         {
-          img: "logo3",
-        },
-        {
-          img: "logo3",
-        },
-        {
-          img: "logo3",
+          img: "Develop-footer-cooperative-partner7",
         },
       ],
     };
@@ -178,35 +201,39 @@ export default {
 </script>
 <style lang="scss" scoped>
 .Develop {
+  h4 {
+    color: white;
+    margin: 20px 0;
+  }
   background-color: black;
-  color: white;
   &-h1 {
     background: url("../static/Banner/Develop-bg.jpg") 50% no-repeat;
     height: 200px;
     line-height: 200px;
     font-size: 38px;
     font-weight: 300;
-    color: #ccc;
     text-align: center;
+    color: #ccc;
   }
   &-card {
     width: 100%;
     height: 100%;
-    margin: 0 auto;
     text-align: center;
     &-top {
-      &-left {
-        &-row {
-          background-color: white;
-          color: black;
-        }
-        p {
-          margin: 5px auto 8px;
-        }
-        img {
-          width: 90%;
-          margin: 10px auto 0;
-        }
+      margin: 0 auto;
+    }
+    &-left {
+      &-row {
+        background-color: white;
+        color: black;
+        margin: 0 auto;
+      }
+      p {
+        margin: 5px auto 8px;
+      }
+      img {
+        width: 90%;
+        margin: 10px auto 0;
       }
     }
     &-bottom {

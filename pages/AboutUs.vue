@@ -12,9 +12,9 @@
       <h1 class="BannerView-h1">关于我们</h1>
       <el-row class="AboutUs-card" justify="space-between">
         <el-col :span="12" class="AboutUs-card-left" :xs="24">
-          <!-- <img src="../static/AboutUs/AboutUs.jpg" alt="" style="width: 100%" /> -->
+          <img src="../static/AboutUs/AboutUs.jpg" alt="" style="width: 90%" />
         </el-col>
-        <el-col :span="12" class="AboutUs-card-right">
+        <el-col :span="12" :xs="24" class="AboutUs-card-right">
           <div class="AboutUs-card-right-div">
             <h4>V I R T U A L &nbsp;&nbsp;&nbsp;&nbsp;R E A L I T Y</h4>
             <h2>公司简介</h2>
@@ -25,7 +25,11 @@
         </el-col>
       </el-row>
 
-      <div v-for="item in dataList" :key="item" class="AboutUs-List-card">
+      <div
+        v-for="(item, index) in dataList"
+        :key="index"
+        class="AboutUs-List-card"
+      >
         <h5>{{ item.title }}</h5>
         <p class="AboutUs-List-card-main">{{ item.main }}</p>
         <p class="AboutUs-List-card-footer">{{ item.footer }}</p>
@@ -34,7 +38,12 @@
         <h1 class="AboutUs-Banner-h1">探索未来</h1>
       </div>
       <div class="AboutUs-video">
-        <video class="AboutUs-video-move" src="" autoplay loop></video>
+        <video class="AboutUs-video-move" autoplay loop>
+          <source
+            src="https://vd3.bdstatic.com/mda-pc41usfy9q8pzf0s/sc/cae_h264/1677979619701766903/mda-pc41usfy9q8pzf0s.mp4?v_from_s=hkapp-haokan-suzhou&auth_key=1678183253-0-0-5f5bcbd883bc4237a406de7c4689c058&bcevod_channel=searchbox_feed&pd=1&cd=0&pt=3&logid=1853545363&vid=6644777784981925461&abtest=107353_1&klogid=1853545363"
+            type="video/webm"
+          />
+        </video>
       </div>
     </el-main>
     <el-footer>
@@ -51,26 +60,6 @@ export default {
   name: "AboutUs",
   data() {
     return {
-      items: [
-        {
-          title: "aaaa",
-        },
-        {
-          title: "aaaa",
-        },
-        {
-          title: "aaaa",
-        },
-        {
-          title: "aaaa",
-        },
-        {
-          title: "aaaa",
-        },
-        {
-          title: "aaaa",
-        },
-      ],
       dataList: [
         {
           title: "我们的愿景",
@@ -78,9 +67,10 @@ export default {
           footer: "愿景：成为合规、安全、舒适、智慧场景的行业标杆",
         },
         {
-          title: "我们的愿景2",
+          title: "我们的经营理念",
           main: "OUR VISION",
-          footer: "愿景：成为合规、安全、舒适、智慧场景的行业标杆",
+          footer: `环境：创造舒适建筑空间；绿色安全，节能环保
+          员工：尊重员工、培养员工并提供发展空间 `,
         },
         {
           title: "我们的愿景2",
@@ -114,8 +104,11 @@ export default {
     }
     &-right {
       text-align: left;
+      margin: 0 auto;
       &-div {
+        color: #969696;
         line-height: 30px;
+        padding: 10px;
         h4 {
           margin-top: 30px;
         }
@@ -153,6 +146,9 @@ export default {
     }
   }
   &-Banner {
+    h1 {
+      color: white;
+    }
     width: 100%;
     height: 200px;
     line-height: 200px;
@@ -178,7 +174,7 @@ export default {
   line-height: 200px;
   font-size: 38px;
   font-weight: 300;
-  color: #ccc;
+  color: white;
   text-align: center;
 }
 </style>

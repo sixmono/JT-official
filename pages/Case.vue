@@ -10,16 +10,18 @@
         </BannerView>
         <h1 class="Case-h1">案例展示</h1>
 
-        <el-row justify="space-around" class="Case-card">
+        <el-row type="flex" justify="space-around" class="Case-card">
           <el-col
-            v-for="item in list"
-            :key="item"
+            v-for="(item, index) in list"
+            :key="index"
             class="Case-card-col"
             :sm="24"
             :md="7"
           >
+            <!-- <div class="Case-card-col-aa">asdadasdsa</div> -->
+
             <div class="Case-card-col-positive">
-              <img :src="require(`../static/Case/${item.img}.jpg`)" alt="" />
+              <img :src="require(`../static/Case/${item.img}.png`)" alt="" />
               <div class="Case-card-col-positive-text">
                 <h6>{{ item.title }}</h6>
                 <p>{{ item.body }}</p>
@@ -46,63 +48,38 @@ export default {
       list: [
         {
           img: "CaseCard1",
-          title: "测试",
-          body: "啊哈哈哈哈哈哈哈哈哈",
+          title: "消毒",
+          body: "某世界500强医药公司仓库消杀",
         },
         {
-          img: "CaseCard1",
-          title: "测试",
-          body: "啊哈哈哈哈哈哈哈哈哈",
+          img: "CaseCard2",
+          title: "AR眼镜",
+          body: "某石油公司AR智能辅助系统",
         },
         {
-          img: "CaseCard1",
-          title: "测试",
-          body: "啊哈哈哈哈哈哈哈哈哈",
+          img: "CaseCard3",
+          title: "AR远程协助",
+          body: "某地区院前AR协助救助车",
         },
         {
-          img: "CaseCard1",
-          title: "测试",
-          body: "啊哈哈哈哈哈哈哈哈哈",
+          img: "CaseCard4",
+          title: "机房维护",
+          body: "某世界500强银行机房维护",
         },
         {
-          img: "CaseCard1",
-          title: "测试",
-          body: "啊哈哈哈哈哈哈哈哈哈",
+          img: "CaseCard5",
+          title: "轮胎检测",
+          body: "某世界500强远程检修轮胎",
         },
         {
-          img: "CaseCard1",
-          title: "测试",
-          body: "啊哈哈哈哈哈哈哈哈哈",
+          img: "CaseCard6",
+          title: "医疗",
+          body: "某医疗公司广告内容审核",
         },
         {
-          img: "CaseCard1",
-          title: "测试",
-          body: "啊哈哈哈哈哈哈哈哈哈",
-        },
-        {
-          img: "CaseCard1",
-          title: "测试",
-          body: "啊哈哈哈哈哈哈哈哈哈",
-        },
-        {
-          img: "CaseCard1",
-          title: "测试",
-          body: "啊哈哈哈哈哈哈哈哈哈",
-        },
-        {
-          img: "CaseCard1",
-          title: "测试",
-          body: "啊哈哈哈哈哈哈哈哈哈",
-        },
-        {
-          img: "CaseCard1",
-          title: "测试",
-          body: "啊哈哈哈哈哈哈哈哈哈",
-        },
-        {
-          img: "CaseCard1",
-          title: "测试",
-          body: "啊哈哈哈哈哈哈哈哈哈",
+          img: "CaseCard7",
+          title: "互联网",
+          body: "多家世界知名医药公司互联网信息服务证书办理",
         },
       ],
     };
@@ -129,26 +106,36 @@ export default {
     color: #ccc;
     text-align: center;
   }
+  text-align: center;
 
   &-card {
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-    // &-p {
-    //   transform: rotateY(180deg);
-    //   transform-style: preserve-3d; // 反面
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    // &-col:hover {
+    //   position: relative;
+    //   background-color: red;
     // }
-
     &-col {
+      &-aa {
+        color: white;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+      }
       img {
         width: 100%;
         border-radius: 5px;
       }
 
-      &-positive:hover {
-        transform: rotateY(180deg);
-      }
+      // &-positive:hover {
+      //   transform: rotateY(180deg);
+      //   opacity: 0.6;
+      //   z-index: 1;
+      // }
       &-positive {
+        position: relative;
+        z-index: 11;
         transition: all 1s;
         transform-style: preserve-3d;
         &-text {

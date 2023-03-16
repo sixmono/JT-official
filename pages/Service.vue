@@ -10,11 +10,19 @@
         <img src="../static/Banner/Service.jpg" alt="" />
       </BannerView>
       <h1>案例展示</h1>
-      <div class="Service-dataList" v-for="item in dataList" :key="item">
-        <h4>{{ item.title }}</h4>
-        <p>{{ item.enTile }}</p>
-        <span style="white-space: pre">{{ item.main }}</span>
-      </div>
+      <el-row>
+        <el-col :span="24" :xs="24">
+          <div
+            class="Service-dataList"
+            v-for="(item, index) in dataList"
+            :key="index"
+          >
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.enTile }}</p>
+            <span style="white-space: break-spaces">{{ item.main }}</span>
+          </div></el-col
+        >
+      </el-row>
     </el-main>
     <el-footer>
       <FooterView />
