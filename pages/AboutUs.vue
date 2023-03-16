@@ -12,7 +12,7 @@
       <h1 class="BannerView-h1">关于我们</h1>
       <el-row class="AboutUs-card" justify="space-between">
         <el-col :span="12" class="AboutUs-card-left" :xs="24">
-          <img src="../static/AboutUs/AboutUs.jpg" alt="" style="width: 90%" />
+          <img src="../static/AboutUs/AboutUS.jpg" alt="" style="width: 90%" />
         </el-col>
         <el-col :span="12" :xs="24" class="AboutUs-card-right">
           <div class="AboutUs-card-right-div">
