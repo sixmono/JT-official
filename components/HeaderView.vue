@@ -18,7 +18,7 @@
             <el-menu-item index="/">首页</el-menu-item>
             <el-menu-item index="/AboutUs">我们</el-menu-item>
             <el-menu-item index="/Service">业务</el-menu-item>
-            <el-menu-item index="/Develop">优势</el-menu-item>
+            <el-menu-item index="/Develop">资质</el-menu-item>
             <el-menu-item index="/CaSe">案例</el-menu-item>
           </el-menu>
           <router-view /></div
@@ -42,6 +42,9 @@ export default {
   line-height: 80px;
   position: relative;
   position: 999;
+}
+.el-menu.el-menu--horizontal {
+  border-bottom: none;
 }
 .el-menu--horizontal > .el-menu-item {
   height: 80px;
@@ -67,7 +70,8 @@ export default {
 .swap-logo {
   font-size: 30px;
   line-height: 80px;
-  text-align: center;
+  color: white;
+  margin-left: 20% !important;
 }
 
 .swap-Navigation-list-link {

@@ -1,49 +1,22 @@
 <template>
   <div class="AboutUs">
-      <!-- <el-carousel indicator-position="outside" style="text-align: center">
-        <el-carousel-item v-for="(item, index) in items" :key="index">
-          <img :src="require(`../static/logo/${item.img}.png`)" alt="" />
-        </el-carousel-item>
-      </el-carousel> -->
-      <!-- <img src="../static/AboutUs/AboutUs.jpg" style="width: 100%;" /> -->
-      <!-- <el-row>
-        <el-col
-          v-for="(o, index) in 4"
-          :key="index"
-          :span="5"
-          :offset="index > 0 ? 2 : 0"
-          style="text-align: center ;margin: 10px 0;"
-        >
-          <el-card :body-style="{ padding: ' 0' }">
-            <img
-              src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
-              style="width: 100%"
-            />
-            <div style="padding: 14px">
-              <span>Yummy hamburger</span>
-              <div class="bottom">
-                <time class="time">{{ currentDate.value }}</time>
-                <el-button text class="button">Operating</el-button>
-              </div>
-            </div>
-          </el-card>
-        </el-col>
-      </el-row> -->
-      <!-- <video width="" height="" controls>
-        <source src="../static/Video/AboutUs-Video.mp4" type="">       
-      </video> -->
-      <!-- <video src="../static/Video/AboutUs-Video.mp4" controls /> -->
-      
-    <video
-        src="../static/Video/AboutUs-Video.mp4"
-        width="100%"
+  <div style="text-align: center;">
+  <el-row justify="space-around">
+    <el-col :span="24" :xs="20">
+        <video
+        src="https://jungt.com/_nuxt/videos/AboutUs-Video.2d7a9a2.mp4"
+        width="80%"
         height="100%"
         autoplay
         muted
         loop
-        style="position:relative;z-index: 1;margin-top: 80px;"
+        style="position:relative;z-index: 1;margin: 80px auto"
       ></video>
+    </el-col>
+  </el-row>
 
+  </div>
+    
         <el-row :gutter="0" class="AboutUs-card">
         <el-col :span="12" :xs="24"> 
         <div class="AboutUs-card-left">
@@ -118,12 +91,12 @@
           <el-col :span="4" :xs="24">
             <el-link
               class="AboutUs-case-main-left-link"
-              href=""
+              href="https://jungt.com/Service"
               :underline="false"
               v-for="(item, index) in list"
               :key="index"
             >
-             <p> {{ item.name }}</p> </br>
+              <p> {{ item.name }}</p>
             </el-link>
           </el-col>
           <el-col :span="17" :xs="24">
@@ -142,20 +115,6 @@
                   </div>
               </el-col>
             </el-row>
-            <!-- <el-row justify="space-between" class="AboutUs-case-main-right">
-              <el-col :span="10" v-for="(item, index) in CardList2" :key="index">
-                <div class="AboutUs-case-main-right-div">
-                  <img
-                    :src="require(`../static/Index/${item.img}.jpg`)"
-                    style="width: 100%"
-                  />
-                </div>
-                <div class="AboutUs-case-main-right-card">
-                    <h4>{{ item.title }}</h4>
-                    <p>{{ item.main }}</p>
-                  </div>
-              </el-col>
-            </el-row> -->
           </el-col>
         </el-row>
           </el-col>
@@ -176,9 +135,9 @@
                 <p>
                   {{ item.main }}
                 </p>
-                <div class="AboutUs-news-main-card-footer">
-                  <button> <a :href="item.href">新闻资讯</a> </button>
-                  <a :href="item.href"><span>→</span></a> 
+                <div style="position: absolute;bottom: 0;margin-bottom: 20px;display: flex;width: 100%;">
+                 <button ><a :href="item.href">新闻资讯</a></button>
+                  <a :href="item.href"<span style="display: block;position: absolute;right: 0;margin-right: 30px;">→</span></a>
                 </div>
               </div>
             </el-card></el-col
@@ -321,14 +280,14 @@ const NewList = ref([
     img: "index-footer-card3",
     title: "警惕！习惯性违章的13种“危险人”!",
     date: " 2021-12-10",
-    main: "未穿戴劳保用品、不设置警戒线、酒后上岗……还记得那些发生在我们身边的不安全行为吗？",
+    main: "未穿戴劳保用品、不设置警戒线、酒后上岗……还记得那些发生在我们身边的不安全行为吗？在安全管理中，我们将违反安全操作规...",
     href:"https://mp.weixin.qq.com/s/FI6460BUu3VJXNMbRf2AIg"
  },
   {
     img: "index-footer-card4",
     title: "Facebook改名Meta，高端MR头显明年发布",
     date: " 2021-10-29",
-    main: "北京时间10月29日凌晨1点，2021年Facebook Connect大会正式开幕。会上，Facebook首席执行官马克·扎克伯格宣布Facebook将改名为Meta，原Facebook旗下所有应用和技术都将整合到新公司品牌中。",
+    main: "北京时间10月29日凌晨1点，2021年Facebook Connect大会正式开幕。会上，Facebook首席执行官马克·扎克伯格宣布Facebook将改名为Meta，",
     href:"https://mp.weixin.qq.com/s/2kLsj-UUEEyvoK4jS4vd_g"
 
   },
@@ -388,36 +347,43 @@ const NewList = ref([
   background-color: #0d0d0d;
   /* 公司简介 */
   &-card {
+
     background-color: #0d0d0d;
     margin: 0;
     &-left {
       width: 80%;
-      margin-top: 20px;
+      margin: 20px 0;
       line-height: 30px;
       color: #969696;
       margin: 0 auto;
+      div{
+        font-size: 18px;
+      }
     }
     &-left h1,
     .case-header h1,
     .ourServices-header h1 {
       margin: 0;
-      font-size: 36px;
+      font-size: 38px;
       font-weight: 300;
       margin: 20px 0;
     }
     &-left span,
     .case-header span,
     .ourServices-header span {
-      font-size: 12px;
+      font-size: 16px;
     }
 
     &-right {
       line-height: 300px;
       vertical-align: middle;
       text-align: center;
+      display: flex;
     }
     &-right img {
-      width: 90%;
+      width: 70%;
+      margin: 20px auto;
+
     }
   }
 
@@ -507,6 +473,8 @@ const NewList = ref([
 
   /* 新闻 */
   &-news-header {
+    color: white;
+    margin: 20px 0;
     h1 {
       text-align: center;
       margin-top: 20px;
@@ -526,7 +494,7 @@ const NewList = ref([
       text-align: left;
       padding: 10px;
       transition: all 1;
-      height: 440px;
+      height: 400px;
       img {
         text-align: center;
         width: 100%;
@@ -537,17 +505,21 @@ const NewList = ref([
     }
     &-footer {
       color: #969696;
-              position: absolute;
-               bottom: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
         margin-bottom: 20px;
 
       button {
+        position: relative;
+        left: 0;
         float: left;
-        left: 20px;
       }
-      span {
-        float: right;
-        margin-left: 170px;
+      div {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        margin-right: 20px;
       }
     }
   }

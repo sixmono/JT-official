@@ -18,8 +18,6 @@
             :sm="24"
             :md="7"
           >
-            <!-- <div class="Case-card-col-aa">asdadasdsa</div> -->
-
             <div class="Case-card-col-positive">
               <img :src="require(`../static/Case/${item.img}.png`)" alt="" />
               <div class="Case-card-col-positive-text">
@@ -119,12 +117,13 @@ export default {
     &-col {
       &-aa {
         color: white;
-        position: absolute;
         width: 100%;
         z-index: 10;
+        margin: 60px 0 0 0;
       }
       img {
         width: 100%;
+        height: 100%;
         border-radius: 5px;
       }
 
@@ -134,10 +133,8 @@ export default {
       //   z-index: 1;
       // }
       &-positive {
-        position: relative;
         z-index: 11;
-        transition: all 1s;
-        transform-style: preserve-3d;
+        height: 70%;
         &-text {
           text-align: left;
           text-overflow: ellipsis;

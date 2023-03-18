@@ -16,7 +16,7 @@
         </el-col>
         <el-col :span="12" :xs="24" class="AboutUs-card-right">
           <div class="AboutUs-card-right-div">
-            <h4>V I R T U A L &nbsp;&nbsp;&nbsp;&nbsp;R E A L I T Y</h4>
+            <h4>C o m p a n y &nbsp;&nbsp;&nbsp;&nbsp; P r o f i l e</h4>
             <h2>公司简介</h2>
             <p>
               高新技术企业，致力于人工智能场景落地服务，凭借多年的系统集成研发和覆盖全国的现场服务经验，为用户提供无侵入式的智能化方案，最终为企业实现降本增效的经营目标。
@@ -38,12 +38,15 @@
         <h1 class="AboutUs-Banner-h1">探索未来</h1>
       </div>
       <div class="AboutUs-video">
-        <video class="AboutUs-video-move" autoplay loop>
-          <source
-            src="https://vd3.bdstatic.com/mda-pc41usfy9q8pzf0s/sc/cae_h264/1677979619701766903/mda-pc41usfy9q8pzf0s.mp4?v_from_s=hkapp-haokan-suzhou&auth_key=1678183253-0-0-5f5bcbd883bc4237a406de7c4689c058&bcevod_channel=searchbox_feed&pd=1&cd=0&pt=3&logid=1853545363&vid=6644777784981925461&abtest=107353_1&klogid=1853545363"
-            type="video/webm"
-          />
-        </video>
+        <video
+          src="https://jungt.com/_nuxt/videos/AboutUs-Video.2d7a9a2.mp4"
+          width="80%"
+          height="100%"
+          autoplay
+          muted
+          loop
+          style="position: relative; z-index: 1; margin: 80px auto"
+        ></video>
       </div>
     </el-main>
     <el-footer>
@@ -68,15 +71,15 @@ export default {
         },
         {
           title: "我们的经营理念",
-          main: "OUR VISION",
+          main: "OUR Management Idea",
           footer: `环境：创造舒适建筑空间；绿色安全，节能环保
           员工：尊重员工、培养员工并提供发展空间 `,
         },
-        {
-          title: "我们的愿景2",
-          main: "OUR VISION",
-          footer: "愿景：成为合规、安全、舒适、智慧场景的行业标杆",
-        },
+        // {
+        //   title: "我们的愿景2",
+        //   main: "OUR VISION",
+        //   footer: "愿景：成为合规、安全、舒适、智慧场景的行业标杆",
+        // },
       ],
     };
   },
@@ -155,9 +158,10 @@ export default {
     text-align: center;
   }
   &-video {
-    width: 60%;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
+    text-align: center;
     &-move {
       width: 100%;
       height: 100%;
