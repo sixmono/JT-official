@@ -199,6 +199,11 @@ export default {
   position: fixed !important;
   top: 100 !important;
 }
+:global(.xim_modal) {
+  // bottom: -36%;
+  height: 50% !important ;
+}
+
 // .el-carousel__item h3 {
 //   color: #475669;
 //   opacity: 0.75;

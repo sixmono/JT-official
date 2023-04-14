@@ -49,7 +49,7 @@ export default {
         {
           img: "CaseCard1",
           title: "智能应急处理",
-          body: "上海城投电气柜智能诊断及应急处置项目",
+          body: "某国企电气柜智能诊断及应急处置项目",
           route: "/components/news",
           activePage: 1,
           name: "1",

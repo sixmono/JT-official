@@ -172,7 +172,7 @@ export default {
   margin-bottom: 140px;
 }
 :deep(.el-carousel__container) {
-  height: 880px;
+  height: 480px;
 }
 .videos {
   text-align: center;
