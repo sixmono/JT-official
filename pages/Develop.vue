@@ -4,7 +4,7 @@
       <el-header>
         <HeaderView />
       </el-header>
-      <el-main>
+      <!-- <el-main>
         <BannerView>
           <img src="../static/Banner/Develop.jpg" />
         </BannerView>
@@ -31,34 +31,18 @@
                     justify="space-around"
                     class="Develop-card-left-row"
                   >
-                    <el-col
-                      :span="7"
-                      v-for="(item, index) in List"
-                      :key="index"
-                    >
-                      <img
-                        :src="require(`../static/Develop/${item.img}.png`)"
-                      />
+                    <el-col :span="7" v-for="(item, index) in List" :key="index">
+                      <img :src="require(`../static/Develop/${item.img}.png`)" />
                       <p>{{ item.title }}</p>
                     </el-col>
                   </el-row>
                 </div>
               </el-col>
-              <!-- <el-col
-                :span="7"
-                :xs="20"
-                class="Develop-card-left"
-                style="margin: 0 20px"
-              >
-                <div>
-                  <h4>| 覆盖全国的专业服务团队 |</h4>
-
-                </div>
-              </el-col> -->
+             
             </el-row>
           </div>
-          <el-row class="Develop-card-bottom" justify="space-around">
-            <el-col :span="7" :xs="20" style="margin: 0 20px; height: 340px">
+          <el-row class="Develop-card-bottom" type="flex" justify="space-between">
+            <el-col :span="7" :xs="20" style="margin: 0 auto; height: 100%">
               <h4>| 合作院校以及获得证书 |</h4>
               <el-row
                 type="flex"
@@ -79,16 +63,17 @@
                 </el-col>
               </el-row>
             </el-col>
-            <el-col :span="7" :xs="20" style="margin: 0 20px; height: 340px">
+
+            <el-col :span="7" :xs="20" style="margin: 0 auto; height: 100%">
               <h4>| 人工智能自有知识产权证书 |</h4>
               <el-row justify="space-around" class="Develop-card-bottom-center">
                 <el-col :span="24">
                   <img src="../static/Develop/Develop-bottom-center.png" />
-                  <p style="margin-bottom: 20px">软著证书</p>
+                  <p style="margin-bottom: 50px">软著证书</p>
                 </el-col>
               </el-row>
             </el-col>
-            <el-col :span="7" :xs="20" style="margin: 0 20px; height: 340px">
+            <el-col :span="7" :xs="20" style="margin: 0 auto; height: 100%">
               <h4>| 云平台无缝整合第三方产品 |</h4>
               <el-row
                 type="flex"
@@ -96,17 +81,40 @@
                 justify="space-around"
                 class="Develop-card-bottom-right"
               >
-                <el-col
-                  :span="7"
-                  v-for="(item, index) in bottomRightList"
-                  :key="index"
-                >
+                <el-col :span="7" v-for="(item, index) in bottomRightList" :key="index">
                   <img :src="require(`../static/Develop/${item.img}.jpg`)" />
+                  <p style="margin-bottom: 10px"></p>
                 </el-col>
               </el-row>
             </el-col>
           </el-row>
         </div>
+      </el-main> -->
+      <el-main>
+        <BannerView>
+          <img src="../static/Banner/Develop.jpg" />
+        </BannerView>
+        <div class="headerView">
+          <h1 class="Develop-h1">我们的客户</h1>
+        </div>
+        <el-row
+          :gutter="0"
+          style="margin: 0 auto; flex-flow: wrap; background-color: white"
+          type="flex"
+        >
+          <el-col
+            :span="6"
+            :xs="24"
+            v-for="(item, index) in items"
+            :key="index"
+            style="text-align: center"
+          >
+            <img
+              :src="require(`../static/Develop/${item.img}.png`)"
+              style="padding: 20px 0"
+            />
+          </el-col>
+        </el-row>
       </el-main>
     </el-container>
     <el-footer>
@@ -124,7 +132,7 @@ export default {
   // 核心优势/有利条件
   data() {
     return {
-      List: [
+      items: [
         {
           img: "Develop1",
         },
@@ -152,44 +160,88 @@ export default {
         {
           img: "Develop9",
         },
-      ],
-      bottomLeftList: [
         {
           img: "Develop10",
-          title: "合作院校",
         },
         {
           img: "Develop11",
-          title: "荣誉证书",
         },
         {
           img: "Develop12",
-          title: "荣誉证书",
+        },
+        {
+          img: "Develop13",
+        },
+        {
+          img: "Develop14",
         },
       ],
-      bottomRightList: [
-        {
-          img: "Develop-footer-cooperative-partner",
-        },
-        {
-          img: "Develop-footer-cooperative-partner2",
-        },
-        {
-          img: "Develop-footer-cooperative-partner3",
-        },
-        {
-          img: "Develop-footer-cooperative-partner4",
-        },
-        {
-          img: "Develop-footer-cooperative-partner5",
-        },
-        {
-          img: "Develop-footer-cooperative-partner6",
-        },
-        {
-          img: "Develop-footer-cooperative-partner7",
-        },
-      ],
+      // List: [
+      //   {
+      //     img: "Develop1",
+      //   },
+      //   {
+      //     img: "Develop2",
+      //   },
+      //   {
+      //     img: "Develop3",
+      //   },
+      //   {
+      //     img: "Develop4",
+      //   },
+      //   {
+      //     img: "Develop5",
+      //   },
+      //   {
+      //     img: "Develop6",
+      //   },
+      //   {
+      //     img: "Develop7",
+      //   },
+      //   {
+      //     img: "Develop8",
+      //   },
+      //   {
+      //     img: "Develop9",
+      //   },
+      // ],
+      // bottomLeftList: [
+      //   {
+      //     img: "Develop10",
+      //     title: "合作院校",
+      //   },
+      //   {
+      //     img: "Develop11",
+      //     title: "荣誉证书",
+      //   },
+      //   {
+      //     img: "Develop12",
+      //     title: "荣誉证书",
+      //   },
+      // ],
+      // bottomRightList: [
+      //   {
+      //     img: "Develop-footer-cooperative-partner",
+      //   },
+      //   {
+      //     img: "Develop-footer-cooperative-partner2",
+      //   },
+      //   {
+      //     img: "Develop-footer-cooperative-partner3",
+      //   },
+      //   {
+      //     img: "Develop-footer-cooperative-partner4",
+      //   },
+      //   {
+      //     img: "Develop-footer-cooperative-partner5",
+      //   },
+      //   {
+      //     img: "Develop-footer-cooperative-partner6",
+      //   },
+      //   {
+      //     img: "Develop-footer-cooperative-partner7",
+      //   },
+      // ],
     };
   },
   components: {
@@ -199,7 +251,34 @@ export default {
   },
 };
 </script>
+
 <style lang="scss" scoped>
+@media screen and (max-width: 760px) {
+  .Banner {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .Banner {
+    margin-top: 160px;
+  }
+}
+.el-main {
+  overflow: hidden;
+}
+.el-footer {
+  padding: 0;
+}
+.headerView {
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 38px;
+    font-weight: 300;
+    height: 200px;
+    line-height: 200px;
+  }
+}
 .Develop {
   h4 {
     color: white;
@@ -237,6 +316,7 @@ export default {
       }
     }
     &-bottom {
+      flex-flow: wrap;
       &-left,
       &-center,
       &-right {

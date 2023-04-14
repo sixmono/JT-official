@@ -15,6 +15,7 @@ export default {};
   margin: 0;
 }
 .Banner {
+  overflow: hidden;
   width: 100%;
   &-header {
     height: 20%;

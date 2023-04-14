@@ -16,20 +16,16 @@
         </el-col>
         <el-col :span="12" :xs="24" class="AboutUs-card-right">
           <div class="AboutUs-card-right-div">
-            <h4>C o m p a n y &nbsp;&nbsp;&nbsp;&nbsp; P r o f i l e</h4>
-            <h2>公司简介</h2>
+            <h4>&nbsp;C o m p a n y &nbsp;&nbsp;&nbsp;&nbsp; P r o f i l e</h4>
+            <h2>&nbsp;公司简介</h2>
             <p>
-              高新技术企业，致力于人工智能场景落地服务，凭借多年的系统集成研发和覆盖全国的现场服务经验，为用户提供无侵入式的智能化方案，最终为企业实现降本增效的经营目标。
+              &nbsp;&nbsp;高新技术企业，致力于人工智能场景落地服务，凭借多年的系统集成研发和覆盖全国的现场服务经验，为用户提供无侵入式的智能化方案，最终为企业实现降本增效的经营目标。
             </p>
           </div>
         </el-col>
       </el-row>
 
-      <div
-        v-for="(item, index) in dataList"
-        :key="index"
-        class="AboutUs-List-card"
-      >
+      <div v-for="(item, index) in dataList" :key="index" class="AboutUs-List-card">
         <h5>{{ item.title }}</h5>
         <p class="AboutUs-List-card-main">{{ item.main }}</p>
         <p class="AboutUs-List-card-footer">{{ item.footer }}</p>
@@ -37,8 +33,8 @@
       <div class="AboutUs-Banner">
         <h1 class="AboutUs-Banner-h1">探索未来</h1>
       </div>
-      <div class="AboutUs-video">
-        <video
+      <!--<div class="AboutUs-video">
+         <video
           src="https://jungt.com/_nuxt/videos/AboutUs-Video.2d7a9a2.mp4"
           width="80%"
           height="100%"
@@ -46,7 +42,21 @@
           muted
           loop
           style="position: relative; z-index: 1; margin: 80px auto"
-        ></video>
+        ></video> 
+      </div>-->
+      <div class="carousel">
+        <el-carousel :interval="3000" arrow="always" class="videos">
+          <el-carousel-item class="item" v-for="(item, index) in FutureList" :key="index">
+            <!-- <el-image
+              fit="cover"
+              :zoom-rate="1.2"
+              :initial-index="4"
+              :src="require(`../static/AboutUs/${item.img}.png`)"
+              :preview-src-list="FutureList1"
+            /> -->
+            <el-image :src="require(`../static/AboutUs/${item.img}.png`)" />
+          </el-carousel-item>
+        </el-carousel>
       </div>
     </el-main>
     <el-footer>
@@ -81,6 +91,70 @@ export default {
         //   footer: "愿景：成为合规、安全、舒适、智慧场景的行业标杆",
         // },
       ],
+      FutureList: [
+        {
+          img: "AboutUs-future1",
+        },
+        {
+          img: "AboutUs-future2",
+        },
+        {
+          img: "AboutUs-future3",
+        },
+        {
+          img: "AboutUs-future4",
+        },
+        {
+          img: "AboutUs-future5",
+        },
+        {
+          img: "AboutUs-future15",
+        },
+        {
+          img: "AboutUs-future16",
+        },
+        {
+          img: "AboutUs-future17",
+        },
+        {
+          img: "AboutUs-future6",
+        },
+        {
+          img: "AboutUs-future7",
+        },
+        {
+          img: "AboutUs-future8",
+        },
+        {
+          img: "AboutUs-future9",
+        },
+        {
+          img: "AboutUs-future10",
+        },
+        {
+          img: "AboutUs-future11",
+        },
+        {
+          img: "AboutUs-future12",
+        },
+        {
+          img: "AboutUs-future13",
+        },
+        {
+          img: "AboutUs-future14",
+        },
+      ],
+      // FutureList1: [
+      //   "https://img1.baidu.com/it/u=413643897,2296924942&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1681578000&t=e55e58b0cdf72d97a36548dbd1c9297a",
+      //   "https://img1.baidu.com/it/u=413643897,2296924942&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1681578000&t=e55e58b0cdf72d97a36548dbd1c9297a",
+      //   "https://img1.baidu.com/it/u=413643897,2296924942&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1681578000&t=e55e58b0cdf72d97a36548dbd1c9297a",
+      //   "https://img1.baidu.com/it/u=413643897,2296924942&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1681578000&t=e55e58b0cdf72d97a36548dbd1c9297a",
+      //   "https://img1.baidu.com/it/u=413643897,2296924942&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1681578000&t=e55e58b0cdf72d97a36548dbd1c9297a",
+      //   "https://img1.baidu.com/it/u=413643897,2296924942&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1681578000&t=e55e58b0cdf72d97a36548dbd1c9297a",
+      //   "https://img1.baidu.com/it/u=413643897,2296924942&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1681578000&t=e55e58b0cdf72d97a36548dbd1c9297a",
+      //   "https://img1.baidu.com/it/u=413643897,2296924942&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1681578000&t=e55e58b0cdf72d97a36548dbd1c9297a",
+      //   "https://img1.baidu.com/it/u=413643897,2296924942&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1681578000&t=e55e58b0cdf72d97a36548dbd1c9297a",
+      // ],
     };
   },
   // 关于我们
@@ -93,6 +167,46 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.carousel {
+  background-color: #0d0d0d;
+  margin-bottom: 140px;
+}
+:deep(.el-carousel__container) {
+  height: 880px;
+}
+.videos {
+  text-align: center;
+  .el-image {
+    height: 90%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  :deep(.el-carousel__container) {
+    height: 500px;
+  }
+  .videos {
+    text-align: center;
+    .el-image {
+      height: 56%;
+      vertical-align: middle;
+      margin-top: 100px;
+    }
+  }
+}
+@media screen and (max-width: 760px) {
+  .Banner {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .Banner {
+    margin-top: 160px;
+  }
+}
+// .el-carousel__button {
+//   position: absolute;
+
+// }
 .AboutUs {
   width: 100%;
   background-color: #121212;
@@ -168,6 +282,7 @@ export default {
     }
   }
 }
+
 // 总体样式
 .el-row {
   background-color: #121212;

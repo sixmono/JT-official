@@ -1,3 +1,259 @@
 <template>
-  <div></div>
+  <div class="news">
+    <el-container>
+      <el-header>
+        <HeaderView />
+      </el-header>
+    </el-container>
+    <el-main class="news-main">
+      <BannerView>
+        <img src="../../static/Banner/Develop.jpg" alt="" />
+      </BannerView>
+      <el-row>
+        <el-col :span="24" :xs="24">
+          <div v-for="(item, index) in list" :key="index">
+            <div v-show="activePage == index + 1 ? true : false">
+              <el-card>
+                <template slot="header">
+                  <!-- <NuxtLink to="/CaSe"> -->
+                  <div class="card-div">
+                    <h2>{{ item.mainTitle }}</h2>
+                    <p
+                      style="
+                        white-space: pre-line;
+                        text-decoration: none;
+                        list-style: none;
+                        line-height: 30px;
+                        margin-top: 20px;
+                      "
+                    >
+                      {{ item.mainBackground }}
+                    </p>
+                    <p style="line-height: 30px; margin-top: 20px">
+                      {{ item.mainPain }}
+                    </p>
+                    <p style="line-height: 30px; margin-top: 20px">
+                      {{ item.mainScheme }}
+                    </p>
+                    <p style="line-height: 30px; margin-top: 20px">
+                      {{ item.mainGood }}
+                    </p>
+                  </div>
+                  <!-- </NuxtLink> -->
+                </template>
+              </el-card>
+            </div>
+          </div>
+        </el-col>
+      </el-row>
+      <el-pagination
+        layout="prev, pager, next"
+        @prev-click="prevClick"
+        @next-click="nextClick"
+        :prev-text="`上一页 : ${page[activePage - 1].pageIndex}`"
+        :next-text="`下一页 : ${page[activePage + 1].pageIndex}`"
+        :current-page="activePage"
+        :page-size="1"
+        :total="list.length"
+      >
+      </el-pagination>
+    </el-main>
+    <el-footer>
+      <FooterView />
+    </el-footer>
+  </div>
 </template>
+
+<script>
+import HeaderView from "@/components/HeaderView.vue";
+import FooterView from "@/components/FooterView.vue";
+import Case from "../Case.vue";
+
+export default {
+  name: "news",
+  // 我们的业务/服务
+  data() {
+    return {
+      activePage: parseInt(sessionStorage.getItem("下标")),
+      page: [
+        {
+          pageIndex: "暂无",
+        },
+        {
+          pageIndex: "第一页",
+        },
+        {
+          pageIndex: "第二页",
+        },
+        {
+          pageIndex: "第三页",
+        },
+        {
+          pageIndex: "第四页",
+        },
+        {
+          pageIndex: "第五页",
+        },
+        {
+          pageIndex: "第六页",
+        },
+        {
+          pageIndex: "第七页",
+        },
+        {
+          pageIndex: "第八页",
+        },
+        {
+          pageIndex: "暂无",
+        },
+      ],
+      list: [
+        {
+          mainTitle: "上海城投电气柜智能诊断及应急处置项目",
+          mainBackground: `背景:电气柜火灾造成停电停产，领导担责，灾后投入大量人力巡检，工作强度大，人力成本高`,
+          mainPain: `痛点：烟感报警只能提前几分钟预警电气火灾，救援时间紧；巡检人员技术参差不齐，无法确保及时准确处置电气火灾；人工巡检记录不够准确完整`,
+          mainScheme: `方案：采用极早期类嗅觉和局放等传感器，通过边缘计算机AI算法模型，提前几天发现火灾隐患并预警；知识图谱将最佳处置和管理措施分别发送至值班人员AR眼镜和相关负责人手机，接收人按照方案快速执行即可；传感器实时监测数据记录分析便于复盘创新。`,
+          mainGood: `益处：AI智能提前火灾避险，应急指挥正确措施，多传感器融合和算法模型相结合，人员减少，监管效率大幅提升，变被动受损为主动巡检，降本30%。`,
+        },
+        {
+          mainTitle: "某世界知名外资银行数据中心机房系统改造",
+          mainBackground: `背景：银行数据中心新旧智能化系统并存改造，多年前的旧设备仍需接入新系统，空间狭小，涉及十三个新旧子系统，数据均需采集。一旦发生事故，六秒钟自动报总行监管系统。`,
+          mainPain: `痛点：必须确保设备不断电、不断网，涉及各类新旧子系统和不同品牌，施工和调试难度极大`,
+          mainScheme: `方案：整体规划，通过边缘服务器联通新旧系统，整合多个子系统和网关，重新编程，为用户实现了一网通管；项目实施精细到分钟，对每个子系统均设计了多个应急预案`,
+          mainGood: `益处：规定时间内零误差超前完成项目，银行节省了数百万中心机房搬迁改造费用`,
+        },
+        {
+          mainTitle: "西门子在德国汉诺威工业博览会（全球最大工业展）数字双胞胎项目",
+          mainBackground: `背景：用户希望通过展示厅实现：虚拟下单、数字仿真、知识图谱预测、AR展示等内容的数字双胞胎整体解决方案`,
+          mainPain: `痛点：时间紧、跨专业、要求复杂。短时间内需提供建筑智能化系统接入、IT系统接入、OT系统接入、VR接入、建模、动画制作等各类不同行业工种服务，这些还需要不同国家的用户协同配合。`,
+          mainScheme: `方案：和多国用户保持协同，应对时差，快速建模，接入各类系统，展厅实现虚拟流水线和仿真预测等功能，并通过AR眼镜上实现虚实互动。`,
+          mainGood: `益处：提前完成项目，让用户的案例和流水线仿真系统在展厅完美融合再现。`,
+        },
+        {
+          mainTitle: "某世界前三医疗企业合规方案AI识别服务",
+          mainBackground: `背景：企业有许多中英文EHS及PMS文件需要及时上报处理，许多药品是危化品。`,
+          mainPain: `痛点：文件要求的专业性要求高、数量多，须同时满足药企国内总部、境外总部、药监局等要求，普通OCR和语义识别软件无法满足企业要求，企业安排专人撰写，成本高、效率低；危化品运输和仓储成本高`,
+          mainScheme: `方案：采用知识图谱AI识别学习方式，生成合规报告；依据政府豁免条款，为危化品设计了全流程豁免方案，并取得了监管部门认可的合规报告`,
+          mainGood: `益处：报告的交付时间减少90%，合规方案设计减少32%的物流费用`,
+        },
+        {
+          mainTitle: "上海市急救中心120救护车",
+          mainBackground: `背景：病人在救护车上及时准确救治，是病患健康存活的关键`,
+          mainPain: `痛点：无法确保随车医生对各类病症都能及时准确救护，无法同时监控多个诊疗器械导致效率低；车载摄像头辅助远程监控视角死角多，效果不佳`,
+          mainScheme: `方案：随车医生佩戴AR眼镜，以第一视角对病患进行抢救，车载检测仪器信息同步传输显示在AR眼镜上；联系后台医生，双方同步了解病患情况，后方对随车医生进行视频和冻屏画图指导。`,
+          mainGood: `益处：随车医生及时准确救治，语音操控，解放双手，“黄金抢救时间”运用到极致！`,
+        },
+        {
+          mainTitle: "某部队遇袭演练培训项目",
+          mainBackground: `背景：某部队需演练遭遇核武器袭击、生化武器袭击等应急救援，战士们需通过特定情况下发生的袭击，进行防护与措施`,
+          mainPain: `痛点：现场真实再现训练场景难度大、成本高、安全难保障`,
+          mainScheme: `方案：采用VR眼镜建模仿真，植入多个演习场景，战士可单独亦可协作行动，设置多个环节测评`,
+          mainGood: `益处：可随时随地开展训练，并可自动测评考试成绩`,
+        },
+        {
+          mainTitle: "电力系统数字可视化智能项目",
+          mainBackground: `背景：电力项目配电品牌差异大、地点分散、作业环境复杂、高危作业频繁，  作业任务量、繁重，在生产作业过程中存在较多人为不安全行为状态和环境的不安全因素。`,
+          mainPain: `痛点：需采集的数据参差不齐、流程复杂、任务繁重，专业数据多，必须在合规前提下如期完成，要求苛刻`,
+          mainScheme: `方案：低代码将设备与管理纵向打通；将专业、部门、管理系统、地域四个维度横向融通；将历史数据总结经验，建立模型，分析实时运行，预测将来运行参数实现时间贯通，在关键节点采用AR可视化辅助，最终实现项目全周期可视化协同`,
+          mainGood: `益处：打通数据孤岛，将专业数据可视化，系统操作更简便；提升软件运行可靠性，运检效率提升30%`,
+        },
+        {
+          mainTitle: "银行全国网点智能化改造和运维",
+          mainBackground: `背景：某银行全国营业厅网点分散，各地宣传视频、人员考勤、智能设备的品牌均不同，维护要求不同，管理部门不同，总部希望需要统一管理`,
+          mainPain: `痛点：新旧系统维护种类多、地域分散，现场处置时间紧`,
+          mainScheme: `方案：根据总行政策，整体设计，分步实施，重新设计低代码系统，打通IT和OT多要素；结合全国现场驻扎员工和长期合作人员相结合，对当地的智能化系统进行全生命周期服务`,
+          mainGood: `益处：低成本下覆盖全国所有网点的智能化系统，确保了设备维修及时性、系统运行稳定性，维修效率提升40%`,
+        },
+      ],
+    };
+  },
+  methods: {
+    prevClick() {
+      console.log("上一页");
+      this.activePage = this.activePage - 1;
+    },
+    nextClick() {
+      console.log("下一页");
+      this.activePage = this.activePage + 1;
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+* {
+  padding: 0;
+  white-space: flex;
+}
+.el-footer {
+  padding: 0;
+}
+:global(.el-pager) {
+  display: none;
+}
+.el-main {
+  background-color: #0d0d0d;
+}
+.el-card {
+  background-color: black;
+  border: none;
+}
+:global(.el-card__header) {
+  border: none;
+}
+.card-div {
+  margin: 2% 12%;
+  color: white;
+  padding: 20px 40px 20px 40px;
+}
+.card-div:hover {
+  box-shadow: 0 0 5px white;
+}
+.news {
+  &-main {
+    color: white;
+  }
+}
+.el-footer {
+  width: 100%;
+}
+.el-card__header a {
+  text-decoration: none;
+}
+
+.el-pagination {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  width: 200px;
+  margin-left: 15%;
+  padding-bottom: 9%;
+  text-decoration: none;
+  list-style: none;
+}
+:global(.el-pagination .btn-next, .el-pagination button:disabled) {
+  color: white;
+  background-color: #0d0d0d;
+  padding: 0;
+}
+:global(.el-pagination .btn-prev, ) {
+  color: white;
+  background-color: #0d0d0d;
+  padding: 0;
+}
+:global(.el-pagination button:disabled) {
+  color: sliver;
+  background-color: black;
+}
+:global(.btn-prev) {
+  text-align: left;
+}
+:global(.btn-next) {
+  text-align: left;
+}
+@media screen and (max-width: 750px) {
+  .Banner {
+    margin-top: 80px;
+  }
+}
+</style>
