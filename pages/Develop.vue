@@ -73,6 +73,7 @@
                 </el-col>
               </el-row>
             </el-col>
+
             <el-col :span="7" :xs="20" style="margin: 0 auto; height: 100%">
               <h4>| 云平台无缝整合第三方产品 |</h4>
               <el-row
@@ -87,6 +88,7 @@
                 </el-col>
               </el-row>
             </el-col>
+            
           </el-row>
         </div>
       </el-main> -->
@@ -107,11 +109,32 @@
             :xs="24"
             v-for="(item, index) in items"
             :key="index"
-            style="text-align: center"
+            style="text-align: center; position: relative"
           >
             <img
               :src="require(`../static/Develop/${item.img}.png`)"
-              style="padding: 20px 0"
+              style="padding: 20px 0; width: 60%"
+            />
+          </el-col>
+        </el-row>
+        <div>
+          <h1 class="Develop-h1">合作伙伴</h1>
+        </div>
+        <el-row
+          :gutter="0"
+          style="margin: 0 auto; flex-flow: wrap; background-color: white"
+          type="flex"
+        >
+          <el-col
+            :span="6"
+            :xs="24"
+            v-for="(item, index) in List"
+            :key="index"
+            style="text-align: center"
+          >
+            <img
+              :src="require(`../static/Develop/${item.img}.jpg`)"
+              style="padding: 20px 0; width: 60%"
             />
           </el-col>
         </el-row>
@@ -140,17 +163,27 @@ export default {
           img: "Develop2",
         },
         {
+          img: "Develop6",
+        },
+        {
+          img: "Develop11",
+        },
+        {
+          img: "Develop10",
+        },
+        {
+          img: "Develop5",
+        },
+        {
           img: "Develop3",
         },
         {
           img: "Develop4",
         },
         {
-          img: "Develop5",
+          img: "Develop16",
         },
-        {
-          img: "Develop6",
-        },
+
         {
           img: "Develop7",
         },
@@ -160,51 +193,53 @@ export default {
         {
           img: "Develop9",
         },
-        {
-          img: "Develop10",
-        },
-        {
-          img: "Develop11",
-        },
-        {
-          img: "Develop12",
-        },
+
         {
           img: "Develop13",
         },
         {
           img: "Develop14",
         },
+        {
+          img: "Develop15",
+        },
       ],
-      // List: [
-      //   {
-      //     img: "Develop1",
-      //   },
-      //   {
-      //     img: "Develop2",
-      //   },
-      //   {
-      //     img: "Develop3",
-      //   },
-      //   {
-      //     img: "Develop4",
-      //   },
-      //   {
-      //     img: "Develop5",
-      //   },
-      //   {
-      //     img: "Develop6",
-      //   },
-      //   {
-      //     img: "Develop7",
-      //   },
-      //   {
-      //     img: "Develop8",
-      //   },
-      //   {
-      //     img: "Develop9",
-      //   },
-      // ],
+      List: [
+        {
+          img: "Develop-friends",
+        },
+        {
+          img: "Develop-friends1",
+        },
+        {
+          img: "Develop-friends5",
+        },
+        {
+          img: "Develop-friends6",
+        },
+        {
+          img: "Develop-friends7",
+        },
+        {
+          img: "Develop-friends4",
+        },
+        {
+          img: "Develop-friends3",
+        },
+
+        {
+          img: "Develop-friends11",
+        },
+        {
+          img: "Develop-friends8",
+        },
+        {
+          img: "Develop-friends9",
+        },
+        {
+          img: "Develop-friends10",
+        },
+      ],
       // bottomLeftList: [
       //   {
       //     img: "Develop10",
@@ -244,11 +279,6 @@ export default {
       // ],
     };
   },
-  components: {
-    HeaderView,
-    BannerView,
-    FooterView,
-  },
 };
 </script>
 
@@ -262,6 +292,25 @@ export default {
   .Banner {
     margin-top: 160px;
   }
+}
+// 客服聊天
+:global(.xim-msg-input) {
+  color: black !important;
+}
+
+:global(.xim_float_btn) {
+  position: fixed !important;
+  top: 100 !important;
+}
+:global(.xim_modal) {
+  // bottom: -36%;
+  height: 50% !important ;
+}
+:global(.xim_left_float) {
+  display: none;
+}
+:global(.xim-help) {
+  display: none;
 }
 .el-main {
   overflow: hidden;

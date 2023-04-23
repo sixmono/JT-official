@@ -22,7 +22,7 @@
                     />
                     <h1 class="video-h1">{{ item.title }}</h1>
                     <h2 class="video-h2">{{ item.main }}</h2>
-                    <NuxtLink to="./components/news">
+                    <NuxtLink :to="item.router">
                       <el-button
                         class="video-LearnMore"
                         type=""
@@ -61,6 +61,7 @@ export default {
   name: "Index",
   data() {
     return {
+      // 获取窗口高度
       // height: document.documentElement.clientHeight + "px",
       height: 436 + "px",
       items: [
@@ -69,28 +70,27 @@ export default {
           title: "上海疆通科技有限公司",
           main: "数字可视化项目",
           activePage: 7,
-          // random: "这是随机的按钮",
+          router: "/Case#Digital-visualization",
         },
         {
           img: "index-logo2.jpg",
           title: "上海疆通科技有限公司",
           main: "医疗急救中心",
           activePage: 5,
-          // random: "这也是随机的按钮",
+          router: "/Case#intelligent-system",
         },
         {
           img: "index-logo3.jpg",
           title: "上海疆通科技有限公司",
           main: "AI识别服务",
           activePage: 3,
-          // random: "这个还是随机的按钮",
+          router: "/Case#AI-recognition-service",
         },
       ],
     };
   },
   methods: {
     ClickLearnMore(item) {
-      console.log(item);
       sessionStorage.setItem("下标", item.activePage);
     },
   },
@@ -100,15 +100,7 @@ export default {
     FooterView,
     FooterVIews: () => import("../components/FooterVIews.vue"),
   },
-  mounted() {
-    let script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src =
-      "https://mininiu.top/webim/webim.js?id=17044840710842354630&has_left_float=l&product_desc=上海疆通科技有限公司&showup_after_seconds=10";
-    script.id = "xim_script";
-    document.body.appendChild(script);
-    var ipt = document.getElementById("xim-msg-input");
-    console.log(ipt);
+  created() {
     var w = document.documentElement.clientWidth;
     if (w < 400) {
       this.height = "130px";
@@ -192,9 +184,7 @@ export default {
 :global(.xim-msg-input) {
   color: black !important;
 }
-:global(.xim-help) {
-  display: none;
-}
+
 :global(.xim_float_btn) {
   position: fixed !important;
   top: 100 !important;
@@ -203,7 +193,12 @@ export default {
   // bottom: -36%;
   height: 50% !important ;
 }
-
+:global(.xim_left_float) {
+  display: none;
+}
+:global(.xim-help) {
+  display: none;
+}
 // .el-carousel__item h3 {
 //   color: #475669;
 //   opacity: 0.75;

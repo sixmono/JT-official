@@ -15,21 +15,14 @@
           <img src="../static/AboutUs/AboutUS.jpg" alt="" style="width: 90%" />
         </el-col>
         <el-col :span="12" :xs="24" class="AboutUs-card-right">
-          <div class="AboutUs-card-right-div">
-            <h4>&nbsp;C o m p a n y &nbsp;&nbsp;&nbsp;&nbsp; P r o f i l e</h4>
-            <h2>&nbsp;公司简介</h2>
-            <p>
-              &nbsp;&nbsp;高新技术企业，致力于人工智能场景落地服务，凭借多年的系统集成研发和覆盖全国的现场服务经验，为用户提供无侵入式的智能化方案，最终为企业实现降本增效的经营目标。
-            </p>
+          <div v-for="(item, index) in dataList" :key="index" class="AboutUs-List-card">
+            <h5>{{ item.title }}</h5>
+            <p class="AboutUs-List-card-main">{{ item.main }}</p>
+            <p class="AboutUs-List-card-footer">{{ item.footer }}</p>
           </div>
         </el-col>
       </el-row>
 
-      <div v-for="(item, index) in dataList" :key="index" class="AboutUs-List-card">
-        <h5>{{ item.title }}</h5>
-        <p class="AboutUs-List-card-main">{{ item.main }}</p>
-        <p class="AboutUs-List-card-footer">{{ item.footer }}</p>
-      </div>
       <div class="AboutUs-Banner">
         <h1 class="AboutUs-Banner-h1">探索未来</h1>
       </div>
@@ -180,6 +173,36 @@ export default {
     height: 90%;
   }
 }
+// 客服聊天
+:global(.xim-msg-input) {
+  color: black !important;
+}
+
+:global(.xim_float_btn) {
+  position: fixed !important;
+  top: 100 !important;
+}
+:global(.xim_modal) {
+  // bottom: -36%;
+  height: 50% !important ;
+}
+:global(.xim_left_float) {
+  display: none;
+}
+:global(.xim-help) {
+  display: none;
+}
+.el-image__error,
+.el-image__inner,
+.el-image__placeholder {
+  width: auto !important;
+}
+:global(.el-image__error, .el-image__inner, .el-image__placeholder) {
+  width: auto !important;
+}
+:deep(.el-image__error, .el-image__inner, .el-image__placeholder) {
+  width: auto !important;
+}
 @media only screen and (max-width: 500px) {
   :deep(.el-carousel__container) {
     height: 500px;
@@ -187,7 +210,7 @@ export default {
   .videos {
     text-align: center;
     .el-image {
-      height: 56%;
+      height: 0;
       vertical-align: middle;
       margin-top: 100px;
     }
@@ -198,7 +221,7 @@ export default {
     margin-top: 80px;
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 374px) {
   .Banner {
     margin-top: 160px;
   }
@@ -270,16 +293,6 @@ export default {
     height: 200px;
     line-height: 200px;
     text-align: center;
-  }
-  &-video {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    text-align: center;
-    &-move {
-      width: 100%;
-      height: 100%;
-    }
   }
 }
 

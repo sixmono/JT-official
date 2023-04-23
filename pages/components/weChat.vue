@@ -252,6 +252,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// 客服聊天
+:global(.xim-msg-input) {
+  color: black !important;
+}
+
+:global(.xim_float_btn) {
+  position: fixed !important;
+  top: 100 !important;
+}
+:global(.xim_modal) {
+  // bottom: -36%;
+  height: 50% !important ;
+}
+:global(.xim_left_float) {
+  display: none;
+}
+:global(.xim-help) {
+  display: none;
+}
 .el-footer {
   margin: 0;
   padding: 0;

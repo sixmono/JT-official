@@ -6,9 +6,8 @@
           <span>A B O U T U S</span>
           <h1>公司简介</h1>
           <div>
-            高新技术企业，致力于人工智能场景落地服务，
-            凭借多年的系统集成研发和覆盖全国的现场服务经验，
-            为用户提供无侵入式的智能化方案，最终为企业实现降本增效的经营目标。
+          上海疆通科技有限公司于2016年成立，是高新技术企业、科技型中小企业、上海市华东师范大学毕业生实习基地、上海市人工智能行业协会会员单位，拥有电子与智能化工程专业承包二级资质和ISO9001质量体系认证，公司拥有软硬件自主研发能力，一直致力于智能应急处置系统和数据中心的智能化建设。
+主营业务是以物联传感为依托、以算法模型赋能、以MR图文呈现，实现MR/OT/IT互通的低代码解决方案。
           </div>
         </div>
         </el-col>
@@ -71,12 +70,11 @@
       </div>
       <div class="AboutUs-case-main">
         <el-row type="flex" style="flex-flow: wrap;" class="AboutUs-case-main-left" justify="space-around">
-          <el-col :span="4" :xs="24">
-            <NuxtLink to="/case" class="AboutUs-case-main-left-link"
-              v-for="(item, index) in list"
-              :key="'list' + index">
+          <el-col :span="4" :xs="24" >
+            <NuxtLink v-for="(item, index) in list"
+              :key="'list' + index" :to="item.router" class="AboutUs-case-main-left-link">
               <p> {{ item.name }}</p>
-              </NuxtLink>
+            </NuxtLink>
           </el-col>
           <el-col :span="17" :xs="24">
             <el-row type="flex" justify="space-around" style="flex-flow: wrap;position: relative;"  class="AboutUs-case-main-right">
@@ -164,12 +162,7 @@
 <script setup>
 import { ref } from "vue";
 
-const w = document.documentElement.clientWidth;
-
-const h = document.getElementById('span')
-
-
-const items = [
+const items = ref([
   {
     img: "logo",
   },
@@ -181,35 +174,66 @@ const items = [
   },
   {
     img: "logo4",
-  },
-];
+  },         
+]);
+
 const list = ref([
   {
-    name: "智能应急处理：某国企电气柜智能诊断及应急处置项目",
+    name: "AR眼镜远程协助巡检:大连商品交易所机房",
+    router: "/Case#AR-remote-assistance",
   },
   {
-    name: "银行数据改造：某世界知名外资银行数据中心机房系统改造",
+    
+    name: "互动多媒体展陈:国家会展中心",
+  router: "/Case#Interactive-multimedia",
   },
   {
-    name: "数字双胞胎：西门子在德国汉诺威工业博览会（全球最大工业展）数字双胞胎项目",
+    
+    name: "多媒体教学:大学实验室",
+  router: "/Case#Multimedia-teaching",
   },
   {
+    
     name: "AI识别服务：某世界前三医疗企业合规方案AI识别服务",
+  router: "/Case#AI-recognition-service",
   },
   {
-    name: "医疗急救中心：上海市急救中心120救护车",
+    
+    name: "Al场景落地:普陀区政府垃圾分类智能管理",
+  router: "/Case#AI-scene-landing",
   },
   {
-    name: "部队演练培训：某部队遇袭演练培训项目",
+    
+    name: "数字孪生:福斯润滑油工厂生产优化",
+  router: "/Case#Digital-twin",
   },
   {
+    
     name: "数字可视化项目：电力系统数字可视化智能项目",
+  router: "/Case#Digital-visualization",
   },
   {
+    
     name: "智能化改造：银行全国网点智能化改造和运维",
+  router: "/Case#Intelligent-transformation",
+  },
+  {
+    
+    name:"人脸识别管控系统︰信达资产公司VIP接待厅",
+  router: "/Case#Face-recognition",
+  },
+  {
+    
+    name:"智慧养老跌倒系统等:裔睿养老院智慧养老系统",
+    router: "/Case#intelligent-system",
+  },
+  {
+    name:"智慧养老定位系统等:上海华阳路为民服务中心",
+    router: "/Case#intelligent-system2",
   },
   {
     name: "....",
+    router: "/Case",
   },
 ]);
 
@@ -219,8 +243,8 @@ const ourServicesList = ref([
     span: "消毒防疫、节能管控、智能家居",
   },
   {
-    title: "AR多媒体",
-    span: "智能AR眼镜、多媒体教学系统、远程医疗、互动多媒体数字展厅",
+    title: "MR多媒体",
+    span: "智能MR眼镜、多媒体教学系统、远程医疗、互动多媒体数字展厅",
   },
   {
     title: "系统集成",
@@ -240,8 +264,8 @@ const CardList = ref([
   },
   {
     img: "AboutUs-ourServices2",
-    title: "AR多媒体",
-    main: "AR眼镜远程协助巡检、互动多媒体数字展陈、多媒体教学、远程医疗",
+    title: "MR多媒体",
+    main: "MR眼镜远程协助巡检、互动多媒体数字展陈、多媒体教学、远程医疗",
   },
   {
     img: "AboutUs-ourServices3",
@@ -255,6 +279,38 @@ const CardList = ref([
   },
 ]);
 
+const NewList = ref([
+  {
+    img: "index-footer-card0",
+    title: '疆通荣获西门子黑客松大赛最佳创意奖',
+    date: "2023-04-13 ",
+    main:"近日，由河北省工业和信息化厅指导，河北省保定市工业和信息化局主办，西门子(中国)有限公司、河北深保投资发展有限公司联合承办的西门子科技创新大赛暨“数字化触手可及”黑客马拉松圆满结束!",
+    href: "https://mp.weixin.qq.com/s/_HaXXiRaoAJTwCrKNSWlDw",
+  },
+  {
+    img: "index-footer-card1",
+    title: '科技挽救生命，AR技术让急救加速',
+    date: " 2022-11-04",
+    main:"在急救车内，随车医生佩戴AR眼镜，以第一视角对病患进行抢救，远程联系医院中的医生，让医生及时了解病患情况，对随车医生的急救措施进行指导与辅助，确保将“黄金抢救时间”运用到极致！",
+    href: "https://mp.weixin.qq.com/s/jCJoHY6HYWubBRDqDQaCmA",
+  },
+  {
+    img: "index-footer-card2",
+    title: "我司可协助医疗企业 遵守广审制度 规范广告行为",
+    date: "2022-02-11",
+    main:"上海市市场监督管理局网站日前公布的行政处罚信息显示，上海光正新视界眼科医院投资有限公司发布虚假广告，对其罚款60万元.",
+    href: "https://mp.weixin.qq.com/s/Pi3kn49o9F26mk69ZQPAIA",
+  },
+  {
+    img: "index-footer-card3",
+    title: "警惕！习惯性违章的13种“危险人”!",
+    date: " 2021-12-10",
+    main:"未穿戴劳保用品、不设置警戒线、酒后上岗……还记得那些发生在我们身边的不安全行为吗？在安全管理中，我们将违反安全操作规...",
+    href: "https://mp.weixin.qq.com/s/FI6460BUu3VJXNMbRf2AIg",
+  }
+]
+);
+
 // const CardList2 = ref([
 //    {
 //     img: "AboutUs-ourServices3",
@@ -267,38 +323,6 @@ const CardList = ref([
 //     main: "人脸识别管控系统、智慧养老跌倒系统等、智慧养老定位系统等",
 //   },
 // ])
-
-const NewList = ref([
-  {
-    img: "index-footer-card1",
-    title: "  科技挽救生命，AR技术让急救加速",
-    date: " 2022-11-04",
-    main: "在急救车内，随车医生佩戴AR眼镜，以第一视角对病患进行抢救，远程联系医院中的医生，让医生及时了解病患情况，对随车医生的急救措施进行指导与辅助，确保将“黄金抢救时间”运用到极致！",
-     href:"https://mp.weixin.qq.com/s/jCJoHY6HYWubBRDqDQaCmA"
- },
-  {
-    img: "index-footer-card2",
-    title: "  我司可协助医疗企业 遵守广审制度 规范广告行为",
-    date: "2022-02-11",
-    main: "上海市市场监督管理局网站日前公布的行政处罚信息显示，上海光正新视界眼科医院投资有限公司发布虚假广告，对其罚款60万元.",
-    href:"https://mp.weixin.qq.com/s/Pi3kn49o9F26mk69ZQPAIA"
-  },
-  {
-    img: "index-footer-card3",
-    title: "  警惕！习惯性违章的13种“危险人”!",
-    date: " 2021-12-10",
-    main: "未穿戴劳保用品、不设置警戒线、酒后上岗……还记得那些发生在我们身边的不安全行为吗？在安全管理中，我们将违反安全操作规...",
-    href:"https://mp.weixin.qq.com/s/FI6460BUu3VJXNMbRf2AIg"
- },
-  {
-    img: "index-footer-card4",
-    title: "  Facebook改名Meta，高端MR头显明年发布",
-    date: " 2021-10-29",
-    main: "北京时间10月29日凌晨1点，2021年Facebook Connect大会正式开幕。会上，Facebook首席执行官马克·扎克伯格宣布Facebook将改名为Meta，",
-    href:"https://mp.weixin.qq.com/s/2kLsj-UUEEyvoK4jS4vd_g"
-
-  },
-]);
 </script>
 
 <style lang="scss">
@@ -507,6 +531,15 @@ const NewList = ref([
             font-weight: 300;
             transition: all linear 0.5s;
           }
+
+            h5 {
+            transition: all linear 0.5s;
+            text-decoration: none;
+            color: #b2b2b2;
+            opacity: 0;
+            display: table-column;
+            font-size: 26px;
+          }
           h6 {
              transition: all linear 0.5s;
             text-decoration: none;
@@ -516,14 +549,7 @@ const NewList = ref([
             font-size: 20px;
           }
          
-          h5 {
-            transition: all linear 0.5s;
-            text-decoration: none;
-            color: #b2b2b2;
-            opacity: 0;
-            display: table-column;
-            font-size: 18px;
-          }
+        
         }
       }
    

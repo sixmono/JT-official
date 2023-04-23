@@ -15,7 +15,6 @@
             <div v-show="activePage == index + 1 ? true : false">
               <el-card>
                 <template slot="header">
-                  <!-- <NuxtLink to="/CaSe"> -->
                   <div class="card-div">
                     <h2>{{ item.mainTitle }}</h2>
                     <p
@@ -39,7 +38,6 @@
                       {{ item.mainGood }}
                     </p>
                   </div>
-                  <!-- </NuxtLink> -->
                 </template>
               </el-card>
             </div>
@@ -65,9 +63,7 @@
 </template>
 
 <script>
-import HeaderView from "@/components/HeaderView.vue";
-import FooterView from "@/components/FooterView.vue";
-import Case from "../Case.vue";
+import Case from "../../pages/Case";
 
 export default {
   name: "news",
@@ -109,7 +105,7 @@ export default {
       ],
       list: [
         {
-          mainTitle: "上海城投电气柜智能诊断及应急处置项目",
+          mainTitle: "上海电气柜智能诊断及应急处置项目",
           mainBackground: `背景:电气柜火灾造成停电停产，领导担责，灾后投入大量人力巡检，工作强度大，人力成本高`,
           mainPain: `痛点：烟感报警只能提前几分钟预警电气火灾，救援时间紧；巡检人员技术参差不齐，无法确保及时准确处置电气火灾；人工巡检记录不够准确完整`,
           mainScheme: `方案：采用极早期类嗅觉和局放等传感器，通过边缘计算机AI算法模型，提前几天发现火灾隐患并预警；知识图谱将最佳处置和管理措施分别发送至值班人员AR眼镜和相关负责人手机，接收人按照方案快速执行即可；传感器实时监测数据记录分析便于复盘创新。`,
@@ -123,7 +119,7 @@ export default {
           mainGood: `益处：规定时间内零误差超前完成项目，银行节省了数百万中心机房搬迁改造费用`,
         },
         {
-          mainTitle: "西门子在德国汉诺威工业博览会（全球最大工业展）数字双胞胎项目",
+          mainTitle: "德国汉诺威工业博览会（全球最大工业展）数字双胞胎项目",
           mainBackground: `背景：用户希望通过展示厅实现：虚拟下单、数字仿真、知识图谱预测、AR展示等内容的数字双胞胎整体解决方案`,
           mainPain: `痛点：时间紧、跨专业、要求复杂。短时间内需提供建筑智能化系统接入、IT系统接入、OT系统接入、VR接入、建模、动画制作等各类不同行业工种服务，这些还需要不同国家的用户协同配合。`,
           mainScheme: `方案：和多国用户保持协同，应对时差，快速建模，接入各类系统，展厅实现虚拟流水线和仿真预测等功能，并通过AR眼镜上实现虚实互动。`,

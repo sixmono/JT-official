@@ -85,11 +85,7 @@ export default {
       ],
     };
   },
-  components: {
-    HeaderView,
-    BannerView,
-    FooterView,
-  },
+
   methods: {
     handleClickEhs() {
       console.log("EHS");
@@ -113,6 +109,25 @@ export default {
   .Banner {
     margin-top: 160px;
   }
+}
+// 客服聊天
+:global(.xim-msg-input) {
+  color: black !important;
+}
+
+:global(.xim_float_btn) {
+  position: fixed !important;
+  top: 100 !important;
+}
+:global(.xim_modal) {
+  // bottom: -36%;
+  height: 50% !important ;
+}
+:global(.xim_left_float) {
+  display: none;
+}
+:global(.xim-help) {
+  display: none;
 }
 h1 {
   background: url("../static/Banner/Service-bg.jpg") 50% no-repeat;

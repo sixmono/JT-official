@@ -51,7 +51,7 @@
           </span>
         </el-dialog>
         <el-dialog title="提示" :visible.sync="dialogVisibleAll" width="20%">
-          <span>已上传</span>
+          <span>您输入的信息已上传,我们将在1-3个工作日联系您</span>
           <span slot="footer" class="dialog-footer">
             <el-button @click="dialogVisibleAll = false">关 闭</el-button>
           </span>

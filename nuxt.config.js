@@ -15,7 +15,18 @@ export default {
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    
+    script:[
+      {
+        src:"https://mininiu.top/webim/webim.js?id=17044840710842354630",
+        id:"xim_script",
+        charset:"utf-8",
+        type:"text/javascript"
+      }
+    ],
   },
+
+
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["element-ui/lib/theme-chalk/index.css"],
