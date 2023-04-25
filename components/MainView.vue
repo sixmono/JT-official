@@ -73,7 +73,10 @@
           <el-col :span="4" :xs="24" >
             <NuxtLink v-for="(item, index) in list"
               :key="'list' + index" :to="item.router" class="AboutUs-case-main-left-link">
-              <p> {{ item.name }}</p>
+              <p>
+              <h3>{{item.title}}</h3>
+               <p style="font-size: 14px;color: silver;">{{ item.name }}</p>
+               </p>
             </NuxtLink>
           </el-col>
           <el-col :span="17" :xs="24">
@@ -179,56 +182,58 @@ const items = ref([
 
 const list = ref([
   {
-    name: "AR眼镜远程协助巡检:大连商品交易所机房",
+    title:"AR眼镜远程协助巡检:",
+    name: "大连商品交易所机房",
     router: "/Case#AR-remote-assistance",
   },
   {
-    
-    name: "互动多媒体展陈:国家会展中心",
-  router: "/Case#Interactive-multimedia",
+    title:"互动多媒体展陈:",
+    name: "国家会展中心",
+    router: "/Case#Interactive-multimedia",
   },
   {
-    
-    name: "多媒体教学:大学实验室",
-  router: "/Case#Multimedia-teaching",
+    title:"多媒体教学:",
+    name: "大学实验室",
+    router: "/Case#Multimedia-teaching",
   },
   {
-    
-    name: "AI识别服务：某世界前三医疗企业合规方案AI识别服务",
-  router: "/Case#AI-recognition-service",
+    title:"AI识别服务:",
+    name: "某世界前三医疗企业合规方案AI识别服务",
+    router: "/Case#AI-recognition-service",
   },
   {
-    
-    name: "Al场景落地:普陀区政府垃圾分类智能管理",
-  router: "/Case#AI-scene-landing",
+    title:"Al场景落地:",
+    name: "普陀区政府垃圾分类智能管理",
+    router: "/Case#AI-scene-landing",
   },
   {
-    
-    name: "数字孪生:福斯润滑油工厂生产优化",
-  router: "/Case#Digital-twin",
+    title:"数字孪生:",
+    name: "福斯润滑油工厂生产优化",
+    router: "/Case#Digital-twin",
   },
   {
-    
-    name: "数字可视化项目：电力系统数字可视化智能项目",
-  router: "/Case#Digital-visualization",
+    title:"数字可视化项目:",
+    name: "电力系统数字可视化智能项目",
+    router: "/Case#Digital-visualization",
   },
   {
-    
-    name: "智能化改造：银行全国网点智能化改造和运维",
-  router: "/Case#Intelligent-transformation",
+    title:"智能化改造: ",
+    name: "银行全国网点智能化改造和运维",
+    router: "/Case#Intelligent-transformation",
   },
   {
-    
-    name:"人脸识别管控系统︰信达资产公司VIP接待厅",
-  router: "/Case#Face-recognition",
+    title:"人脸识别管控系统: ",
+    name:"某十大资产公司VIP接待厅",
+    router: "/Case#Face-recognition",
   },
   {
-    
-    name:"智慧养老跌倒系统等:裔睿养老院智慧养老系统",
+    title:"智慧养老跌倒系统等: ",
+    name:" 裔睿养老院智慧养老系统",
     router: "/Case#intelligent-system",
   },
   {
-    name:"智慧养老定位系统等:上海华阳路为民服务中心",
+    title:"智慧养老定位系统等: ",
+    name:" 上海华阳路为民服务中心",
     router: "/Case#intelligent-system2",
   },
   {
@@ -494,7 +499,7 @@ const NewList = ref([
           text-decoration: none;
           color: #fff;
           p{
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             line-height: 26px;
           }
         }
