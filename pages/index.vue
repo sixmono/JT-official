@@ -75,7 +75,7 @@ export default {
         {
           img: "index-logo2.jpg",
           title: "上海疆通科技有限公司",
-          main: "医疗急救中心",
+          main: "医疗急救中心AR项目",
           activePage: 5,
           router: "/Case#intelligent-system",
         },
