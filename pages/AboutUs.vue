@@ -192,25 +192,17 @@ export default {
 :global(.xim-help) {
   display: none;
 }
-.el-image__error,
-.el-image__inner,
-.el-image__placeholder {
-  width: auto !important;
-}
-:global(.el-image__error, .el-image__inner, .el-image__placeholder) {
-  width: auto !important;
-}
-:deep(.el-image__error, .el-image__inner, .el-image__placeholder) {
-  width: auto !important;
-}
+
 @media only screen and (max-width: 500px) {
-  :deep(.el-carousel__container) {
-    height: 500px;
+  :deep(.el-image__inner) {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
   }
   .videos {
     text-align: center;
     .el-image {
-      height: 0;
+      width: 100%;
       vertical-align: middle;
       margin-top: 100px;
     }
@@ -263,7 +255,6 @@ export default {
 
   &-List-card {
     width: 70%;
-    height: 100%;
     background-color: #121212;
     border-bottom: 1px solid #282828;
     margin: 40px auto 0;

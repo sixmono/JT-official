@@ -49,55 +49,23 @@ export default {
       NewList: [
         {
           img: "index-footer-card0",
-          title: `疆通荣获西门子黑客松大赛最佳创意奖`,
-          date: "  2023-04-13 ",
+          title: "疆通荣获西门子黑客松大赛最佳创意奖",
+          date: "2023-04-13 ",
           main:
             "近日，由河北省工业和信息化厅指导，河北省保定市工业和信息化局主办，西门子(中国)有限公司、河北深保投资发展有限公司联合承办的西门子科技创新大赛暨“数字化触手可及”黑客马拉松圆满结束!",
           href: "https://mp.weixin.qq.com/s/_HaXXiRaoAJTwCrKNSWlDw",
         },
         {
           img: "index-footer-card1",
-          title: `  科技挽救生命，
-          AR技术让急救加速`,
+          title: "科技挽救生命，AR技术让急救加速",
           date: " 2022-11-04",
           main:
             "在急救车内，随车医生佩戴AR眼镜，以第一视角对病患进行抢救，远程联系医院中的医生，让医生及时了解病患情况，对随车医生的急救措施进行指导与辅助，确保将“黄金抢救时间”运用到极致！",
-          href: "https://mp.weixin.qq.com/s/jCJoHY6HYWubBRDqDQaCmA",
+          href:
+            "https://mp.weixin.qq.com/s?__biz=MzIwMDg4MDQyMA==&mid=2247485912&idx=1&sn=e5bc6ca4479a1b2945caee5224276868&chksm=96f73193a180b8855731f8980921c4987705957f7c9ef0662bca0a71189c69a6965f0cd2558c#rd",
         },
         {
           img: "index-footer-card2",
-          title: "  我司可协助医疗企业 遵守广审制度 规范广告行为",
-          date: "2022-02-11",
-          main:
-            "上海市市场监督管理局网站日前公布的行政处罚信息显示，上海光正新视界眼科医院投资有限公司发布虚假广告，对其罚款60万元.",
-          href: "https://mp.weixin.qq.com/s/Pi3kn49o9F26mk69ZQPAIA",
-        },
-        {
-          img: "index-footer-card3",
-          title: "  警惕！习惯性违章的13种“危险人”!",
-          date: " 2021-12-10",
-          main:
-            "未穿戴劳保用品、不设置警戒线、酒后上岗……还记得那些发生在我们身边的不安全行为吗？在安全管理中，我们将违反安全操作规...",
-          href: "https://mp.weixin.qq.com/s/FI6460BUu3VJXNMbRf2AIg",
-        },
-        {
-          img: "index-footer-card4",
-          title: "  Facebook改名Meta，高端MR头显明年发布",
-          date: " 2021-10-29",
-          main:
-            "北京时间10月29日凌晨1点，2021年Facebook Connect大会正式开幕。会上，Facebook首席执行官马克·扎克伯格宣布Facebook将改名为Meta，",
-          href: "https://mp.weixin.qq.com/s/2kLsj-UUEEyvoK4jS4vd_g",
-        },
-        {
-          img: "index-footer-card5",
-          title: `危废贮存间建设管理规范`,
-          date: "2021-10-15",
-          main:
-            "随着各企业不断开足马力加大投入，大力提升产能，随之而来的会产生大量的危废，选址及贮存不当极易造成污染环境，甚至危及生命财产安全。",
-          href: "https://mp.weixin.qq.com/s/xaYYgsOJektLqtziGoax2g",
-        },
-        {
-          img: "index-footer-card6",
           title: "Rokid眼镜助力智慧工厂",
           date: "2021-09-10",
           main:
@@ -105,76 +73,12 @@ export default {
           href: "https://mp.weixin.qq.com/s/PV1ChrcCaOsiSb5PbTjYuA",
         },
         {
-          img: "index-footer-card7",
-          title: "  私藏危化品老板被控制！《新安法》已生效！",
-          date: " 2021-12-10",
+          img: "index-footer-card3",
+          title: "让“养老”到“享老”不再遥远",
+          date: "2021-04-23",
           main:
-            "8月29日，湖北武汉市江岸区塔子湖街道凯信大厦，其二号楼8楼发生化学品泄漏，现场产生烟雾，并伴有浓烈的刺鼻气味，楼内办公人员被紧急疏散。",
-          href: "https://mp.weixin.qq.com/s/aNmBpK--lUtQPFwSTUN6Yg",
-        },
-        {
-          img: "index-footer-card8",
-          title: "触碰《新安法》这些条款，将被追责到底！",
-          date: " 2021-08-27",
-          main:
-            "安全是重中之重的事，许多事故是由于员工的不安全行为导致，控制人为差错对安全有重要的作用。“十大黄金安全原则”你知道吗？",
-          href: "https://mp.weixin.qq.com/s/e4zwDxs7wlgQoSNIbZs6tg",
-        },
-        {
-          img: "index-footer-card9",
-          title: `化工工艺中的这些“危险”，你都了解吗？`,
-          date: "2021-08-06",
-          main:
-            "在化工生产中，高危险装置存在非常多安全隐患，不知道大家有没有注意过？今天就带大家了解一下！",
-          href: "https://mp.weixin.qq.com/s/JB-Bey8fQaaVN-1FsET39Q",
-        },
-        {
-          img: "index-footer-card10",
-          title: "危废管理新方案发布，企业该怎么做？",
-          date: "2021-07-16",
-          main:
-            "近日，国务院办公厅印发《强化危险废物监管和利用处置能力改革实施方案》（以下简称《实施方案》）。生态环境部有关负责人就《实施方案》发布和实施有关情况，回答了记者的提问。",
-          href: "https://mp.weixin.qq.com/s/F6JBg-xLqkFYx0s0ftkDFA",
-        },
-        {
-          img: "index-footer-card11",
-          title: "智能家居，生活走心",
-          date: "2021-07-02",
-          main:
-            "随着智能家居的亮相，越来越多的智能硬通货进入大众家庭，技术日新月异，功能花样翻新，用户拥有了最具新鲜感的生活方式。",
-          href: "https://mp.weixin.qq.com/s/rJnh3LyY0BjBlgiCtiqlkg",
-        },
-        {
-          img: "index-footer-card12",
-          title: "相约2021老博会",
-          date: " 2021-06-08",
-          main:
-            "中国国际养老、辅具及康复医疗博览会（CHINA AID）是国内首屈一指的福祉产业品牌博览会，位居世界同类展会前列。2021养老展，将于6月9日-11日在上海新国际博览中心举办。",
-          href: "https://mp.weixin.qq.com/s/VMRT65qkFHwB80xics_RKQ",
-        },
-        {
-          img: "index-footer-card13",
-          title: `“碳中和”给环卫行业带来的影响`,
-          date: "2021-06-06",
-          main:
-            "今年的政府工作报告，不仅将扎实做好碳达峰、碳中和各项工作列入2021年重点任务，更要求各行各业制定2030年前碳排放达峰行动方案。而促进新型节能低碳环保装备的研发和应用，",
-          href: "https://mp.weixin.qq.com/s/3waPDMUtyPKyBizyW7B7UA",
-        },
-        {
-          img: "index-footer-card14",
-          title: "新固废法实施：危废处置企业怎么做？",
-          date: " 2021-04-16",
-          main:
-            "近期，违法倾倒化工废料导致多人死亡的事故引起广泛关注。新修订的《固体废物污染环境防治法》已施行半年，危废处置，企业怎么做，政府怎么管，值得关注。",
-          href: "https://mp.weixin.qq.com/s/6fkykec3FNUgCrI1EG7TIQ",
-        },
-        {
-          img: "index-footer-card15",
-          title: "职业病防治科普小知识",
-          date: "2021-04-09",
-          main:
-            "职业病，是指企业、事业单位和个体经济组织等用人单位的劳动者在职业活动中，因接触粉尘、放射性物质和其他有毒、有害因素而引起的疾病。我国法定的职业病...",
-          href: "https://mp.weixin.qq.com/s/0uwhC5y67wJhCNwRtePmGQ",
+            "近年来，智能技术对日常生活的渗透，为大部分人带来了便利，也加大了老年人面临的挑战。“智慧养老”“适老化”成为了摆在人们面前的现实课题，也是今年全国两会代表委员们关注的热点。",
+          href: "https://mp.weixin.qq.com/s/Lt8dzcu6eVi1xS20x_YrSA",
         },
         {
           img: "index-footer-card16",
@@ -193,19 +97,78 @@ export default {
           href: "https://mp.weixin.qq.com/s/SzXSOtl8Q880EsJr_Fe78g",
         },
         {
-          img: "index-footer-card18",
-          title: "消毒剂该如何使用？",
-          date: " 2021-01-08",
+          img: "index-footer-card11",
+          title: `智能家居别墅项目`,
+          date: "2021-01-30",
           main:
-            "化学消毒剂是指用于杀灭传播媒介上病原微生物，使其达到无害化要求的制剂。不同于抗生素，化学消毒剂在防病中的主要作用是将病原微生物消灭于人体之外，...",
-          href: "https://mp.weixin.qq.com/s/I0vTNGIbVsOxu2h55jgLgQ",
+            "随着各企业不断开足马力加大投入，大力提升产能，随之而来的会产生大量的危废，选址及贮存不当极易造成污染环境，甚至危及生命财产安全。",
+          href: "https://mp.weixin.qq.com/s/xaYYgsOJektLqtziGoax2g",
+        },
+
+        {
+          img: "index-footer-card4",
+          title: "物联网简史",
+          date: "2020-08-14",
+          main:
+            "世界上第一台物联网设备，到底是谁发明的？第一个提出物联网概念的人，究竟是谁？",
+          href: "https://mp.weixin.qq.com/s/nFLwfOjX0pnzhRAgOcj2yA",
+        },
+
+        {
+          img: "index-footer-card12",
+          title: "欧盟委员会发起物联网反垄断调查",
+          date: " 2020-07-17",
+          main:
+            "欧盟委员会（EC）发起了一项对消费者物联网领域的调查，担心这个新兴市场可能已遭受竞争扭曲。",
+          href: "https://mp.weixin.qq.com/s/_9NJJPeQKvFFhNyD1h1N-A",
         },
         {
-          img: "index-footer-card19",
-          title: "最新消息！2021年1月1日前企业须配备安全总监，享一票否决权!",
-          date: "2020-12-18",
-          main: "最新消息北京市将试行安全总监制度2021年1月1日前企业须配备安全总监",
-          href: "https://mp.weixin.qq.com/s/YVsTYChgmvzBzsmhNNQwaQ",
+          img: "index-footer-card7",
+          title: "物联网塑造新常态",
+          date: "2020-07-24",
+          main:
+            "全球COVID-19的大流行改变了我们思考模式、生活方式和工作节奏。它推动了探索新兴技术的机会，并在各个领域带来了机遇。此外，更加推进了物联网（IoT）的修改和部署",
+          href: "https://mp.weixin.qq.com/s/Afsv5SNJIo51zwqkLFGawg",
+        },
+        {
+          img: "index-footer-card8",
+          title: "工信部发通知，再推5G发展",
+          date: "2020-05-15",
+          main:
+            "5月7日，工信部办公厅正式发布了《关于深入推进移动物联网全面发展的通知》，这是2020年度专门针对物联网领域的首个文件。",
+          href: "https://mp.weixin.qq.com/s/o5q5HJhWO5TwVhIy49E4Jg",
+        },
+        {
+          img: "index-footer-card6",
+          title: `ZigBee or WI-Fi？`,
+          date: " 2019-07-19",
+          main:
+            "目前常用的几种无线通讯协议，各有优缺点。最广为人知的可能就是蓝牙与WI-FI了。而ZigBee作为目前物联网常用的协议之一，自然也有其独特的优势存在。这两种技术承担的角色功能却并不相同。",
+          href: "https://mp.weixin.qq.com/s/HS1ZW5a8Amep7mITDVOCvg",
+        },
+        {
+          img: "index-footer-card4",
+          title: "到底什么是物联网？",
+          date: " 2019-10-31",
+          main:
+            "物联网（ IoT ，Internet of things ）即“万物相连的互联网”，是互联网基础上的延伸和扩展的网络，将各种信息传感设备与互联网结合起来而形成的一个巨大网络，实现在任何时间、任何地点，人、机、物的互联互通。",
+          href: "https://mp.weixin.qq.com/s/ldWD_JRRKKXFCZyJVU_5Rw",
+        },
+        {
+          img: "index-footer-card10",
+          title: "一起来刷题（人工智能+物联网）",
+          date: " 2020-03-27",
+          main:
+            "往期文章也为大家普及了相关物联网与人工智能的应用。今天来验收一下成果，大家可以识别下图的二维码，共20道单选题。 ( ᖛ ̫ ᖛ )ʃ)   ",
+          href: "https://mp.weixin.qq.com/s/e970zN-_RPVy1yfARttFIQ",
+        },
+        {
+          img: "index-footer-card17",
+          title: "科技公司里面是啥样的？",
+          date: " 2019-11-29",
+          main:
+            "不同于卡片需要伸手，人脸门禁做到无感操作，只需要站在门禁面前，轻轻一瞥，自动识别，刷脸进出。简单的录入过人脸后，后面的识别任务就全部交给算法，同时也不用担心门卡或者钥匙遗失啦。",
+          href: "https://mp.weixin.qq.com/s/N7NpYOc6UlLEDCQ04G6NvA",
         },
       ],
     };
@@ -340,19 +303,5 @@ export default {
       display: flex;
     }
   }
-}
-.leftBtn {
-  position: absolute;
-  height: 30px;
-  z-index: 99;
-  left: 0;
-  top: 20%;
-}
-.rightBtn {
-  position: absolute;
-  height: 30px;
-  z-index: 99;
-  right: 0;
-  top: 20%;
 }
 </style>

@@ -113,7 +113,7 @@
           >
             <img
               :src="require(`../static/Develop/${item.img}.png`)"
-              style="padding: 20px 0; width: 60%"
+              style="padding: 20px 0; width: 60%; height: 100%; object-fit: contain"
             />
           </el-col>
         </el-row>
@@ -134,7 +134,7 @@
           >
             <img
               :src="require(`../static/Develop/${item.img}.jpg`)"
-              style="padding: 20px 0; width: 60%"
+              style="padding: 20px 0; width: 100%; height: 100%; object-fit: contain"
             />
           </el-col>
         </el-row>

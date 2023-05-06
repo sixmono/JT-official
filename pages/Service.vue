@@ -10,10 +10,10 @@
         <img src="../static/Banner/Service.jpg" alt="" />
       </BannerView>
       <h1>业务展示</h1>
-      <div style="text-align: center; margin-bottom: 30px">
+      <!-- <div style="text-align: center; margin-bottom: 30px">
         <el-button type="" @click="handleClickAr">AR眼镜</el-button>
         <el-button type="" @click="handleClickEhs">EHS智慧管控</el-button>
-      </div>
+      </div> -->
       <el-row style="height: 600px">
         <el-col :span="24" :xs="24">
           <div
@@ -48,14 +48,14 @@ export default {
     return {
       isShow: true,
       dataList: [
-        {
-          title: "环境管控",
-          enTile: "Environment Manage",
-          main: `1.消毒防疫:24小时空气机器消毒除味、覆盖全国的人工消杀服务;
-2.节能管控:通过智能化方案协助客户通过LEED、Well、绿标等认证实现碳中和;
-3.智能家居:不同品牌家电，不同智能系统，无缝链接，一个APP管所有，用户挑选家居产品不受限制;`,
-          isShow: false,
-        },
+        //         {
+        //           title: "环境管控",
+        //           enTile: "Environment Manage",
+        //           main: `1.消毒防疫:24小时空气机器消毒除味、覆盖全国的人工消杀服务;
+        // 2.节能管控:通过智能化方案协助客户通过LEED、Well、绿标等认证实现碳中和;
+        // 3.智能家居:不同品牌家电，不同智能系统，无缝链接，一个APP管所有，用户挑选家居产品不受限制;`,
+        //           isShow: false,
+        //         },
         {
           title: "AR多媒体",
           enTile: "Environment Manage",
@@ -70,8 +70,8 @@ export default {
           enTile: "System Integration",
           main: `1.数据中心建设:数据中心装修、输配电、精密空调、网络、环控等多个子系统的全生命周期的建设和维护;
 2.AI场景落地:从硬件设计施工到软件交付使用，提供AI场景的落地交钥匙工程;
- 3.多源异构:采用多源异构和数字孪生技术为用户实现一网统管;
- 4.智能化系统维护:对智能化系统从顶层设计，兼容新旧系统，总体规划分步实施，对全国各地智能化系统维护管控;`,
+3.多源异构:采用多源异构和数字孪生技术为用户实现一网统管;
+4.智能化系统维护:对智能化系统从顶层设计，兼容新旧系统，总体规划分步实施，对全国各地智能化系统维护管控;`,
           isShow: true,
         },
         {

@@ -40,6 +40,21 @@
             </el-row>
           </div>
           <MainView />
+          <el-backtop :bottom="80">
+            <div
+              style="
+                height: 100%;
+                width: 100%;
+                background-color: var(--el-bg-color-overlay);
+                box-shadow: var(--el-box-shadow-lighter);
+                text-align: center;
+                line-height: 40px;
+                color: #1989fa;
+              "
+            >
+              ↑
+            </div>
+          </el-backtop>
         </el-main>
         <el-footer>
           <FooterVIews />
@@ -102,8 +117,8 @@ export default {
   },
   created() {
     var w = document.documentElement.clientWidth;
-    if (w < 400) {
-      this.height = "130px";
+    if (w < 500) {
+      this.height = "170px";
     } else if (w > 1400) {
       this.height = "520px";
     }
@@ -222,9 +237,13 @@ export default {
   margin: 0;
   padding: 0;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 500px) {
   .Banner {
     margin-top: 80px;
+  }
+  .el-carousel__container {
+    width: 100%;
+    height: 175px !important;
   }
 }
 .carousel {
@@ -233,7 +252,7 @@ export default {
 }
 .el-carousel__container {
   width: 100%;
-  height: 436px;
+  height: 440px;
 }
 .video {
   position: relative;

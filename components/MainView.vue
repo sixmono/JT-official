@@ -7,7 +7,7 @@
           <h1>公司简介</h1>
           <div>
           上海疆通科技有限公司于2016年成立，是高新技术企业、科技型中小企业、上海市华东师范大学毕业生实习基地、上海市人工智能行业协会会员单位，拥有电子与智能化工程专业承包二级资质和ISO9001质量体系认证，公司拥有软硬件自主研发能力，一直致力于智能应急处置系统和数据中心的智能化建设。
-主营业务是以物联传感为依托、以算法模型赋能、以MR图文呈现，实现MR/OT/IT互通的低代码解决方案。
+主营业务是以物联传感为依托、以算法模型赋能、以MR图文呈现，实现MR/OT/IT互通的低代码系统解决方案。
           </div>
         </div>
         </el-col>
@@ -203,7 +203,7 @@ const list = ref([
   },
   {
     title:"Al场景落地:",
-    name: "普陀区政府垃圾分类智能管理",
+    name: "普陀区垃圾分类智能管理",
     router: "/Case#AI-scene-landing",
   },
   {
@@ -212,7 +212,7 @@ const list = ref([
     router: "/Case#Digital-twin",
   },
   {
-    title:"数字可视化项目:",
+    title:"南方电网数字可视化项目:",
     name: "电力系统数字可视化智能项目",
     router: "/Case#Digital-visualization",
   },
@@ -222,18 +222,18 @@ const list = ref([
     router: "/Case#Intelligent-transformation",
   },
   {
-    title:"人脸识别管控系统: ",
-    name:"某十大资产公司VIP接待厅",
+    title:"人脸识别管控系统:某资产公司VVIP接待厅: ",
+    name:"某十大资产公司VVIP接待厅",
     router: "/Case#Face-recognition",
   },
   {
     title:"智慧养老跌倒系统等: ",
-    name:" 裔睿养老院智慧养老系统",
+    name:" 某养老院智慧养老系统",
     router: "/Case#intelligent-system",
   },
   {
-    title:"智慧养老定位系统等: ",
-    name:" 上海华阳路为民服务中心",
+    title:"智慧养老系统: ",
+    name:" 上海华阳路为民务中心",
     router: "/Case#intelligent-system2",
   },
   {
@@ -297,21 +297,21 @@ const NewList = ref([
     title: '科技挽救生命，AR技术让急救加速',
     date: " 2022-11-04",
     main:"在急救车内，随车医生佩戴AR眼镜，以第一视角对病患进行抢救，远程联系医院中的医生，让医生及时了解病患情况，对随车医生的急救措施进行指导与辅助，确保将“黄金抢救时间”运用到极致！",
-    href: "https://mp.weixin.qq.com/s/jCJoHY6HYWubBRDqDQaCmA",
+    href: "https://mp.weixin.qq.com/s?__biz=MzIwMDg4MDQyMA==&mid=2247485912&idx=1&sn=e5bc6ca4479a1b2945caee5224276868&chksm=96f73193a180b8855731f8980921c4987705957f7c9ef0662bca0a71189c69a6965f0cd2558c#rd",
   },
   {
     img: "index-footer-card2",
-    title: "我司可协助医疗企业 遵守广审制度 规范广告行为",
-    date: "2022-02-11",
-    main:"上海市市场监督管理局网站日前公布的行政处罚信息显示，上海光正新视界眼科医院投资有限公司发布虚假广告，对其罚款60万元.",
-    href: "https://mp.weixin.qq.com/s/Pi3kn49o9F26mk69ZQPAIA",
+    title: "Rokid眼镜助力智慧工厂",
+    date: "2021-09-10",
+    main:"在政策加持与技术发展的双重推动下，智能制造已经成为当今制造行业的发展重点，那么如何通过数字化转型提升智慧工厂效能，降低用工成本，也成为了行业面临的新课题。疆通科技正与Rokid深度合作，欢迎有需求、有兴趣的客户前来垂询。",
+    href: "https://mp.weixin.qq.com/s/PV1ChrcCaOsiSb5PbTjYuA",
   },
   {
     img: "index-footer-card3",
-    title: "警惕！习惯性违章的13种“危险人”!",
-    date: " 2021-12-10",
-    main:"未穿戴劳保用品、不设置警戒线、酒后上岗……还记得那些发生在我们身边的不安全行为吗？在安全管理中，我们将违反安全操作规...",
-    href: "https://mp.weixin.qq.com/s/FI6460BUu3VJXNMbRf2AIg",
+    title: "让“养老”到“享老”不再遥远",
+    date: "2021-04-23",
+    main:"近年来，智能技术对日常生活的渗透，为大部分人带来了便利，也加大了老年人面临的挑战。“智慧养老”“适老化”成为了摆在人们面前的现实课题，也是今年全国两会代表委员们关注的热点。",
+    href: "https://mp.weixin.qq.com/s/Lt8dzcu6eVi1xS20x_YrSA",
   }
 ]
 );
