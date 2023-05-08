@@ -192,13 +192,12 @@ export default {
 :global(.xim-help) {
   display: none;
 }
-
+:deep(.el-image__inner) {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
 @media only screen and (max-width: 500px) {
-  :deep(.el-image__inner) {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-  }
   .videos {
     text-align: center;
     .el-image {
