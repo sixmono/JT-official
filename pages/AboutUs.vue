@@ -194,7 +194,7 @@ export default {
 }
 :deep(.el-image__inner) {
   width: 100% !important;
-  height: 100% !important;
+  height: -webkit-fill-available;
   object-fit: contain !important;
 }
 @media only screen and (max-width: 500px) {
