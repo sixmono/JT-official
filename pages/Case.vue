@@ -95,7 +95,7 @@ export default {
           name: "Multimedia-teaching",
         },
         {
-          img: "CaseCard4",
+          img: "CaseCard14",
           title: "AI识别服务",
           background: `背景:某世界前三医疗企业合规方案AI识别服务。
           
