@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    Copyright&copy;
+    &copy;
     <a class="Jt" href="https://jungt.com/">上海疆通科技有限公司</a> 版权所有
     <a href="https://beian.miit.gov.cn/">沪ICP备18029365号</a>
   </div>
