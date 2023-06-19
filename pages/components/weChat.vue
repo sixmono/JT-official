@@ -48,6 +48,42 @@ export default {
       spend: 120,
       NewList: [
         {
+          img: "6-19-index-footer-card1",
+          title: "疆通AR眼镜助力大连商品交易所机房",
+          date: "2023-06-06 ",
+          main:
+            "随着科技的不断发展，人们对于高效、智能的工作方式也提出了更高的要求。其中，AR眼镜（增强现实眼镜）为工作现场的各项巡检任务带来了全新的协作方式。通过引入AR眼镜远程协助巡检，能够使现场人员依托专业巡检人员的指导，解决复杂问题，提升巡检质量及效率。",
+          href:
+            "https://mp.weixin.qq.com/s?__biz=MzIwMDg4MDQyMA==&mid=2247485930&idx=1&sn=d1ff0e78f2c6780749d326c042585aa8&chksm=96f731a1a180b8b770dc5eda7915b9f09f24d5c6ac57a7c6423d8467852b5616ebbaf9227d38#rd",
+        },
+        {
+          img: "6-19-index-footer-card2",
+          title: "科技与文化相结合，疆通为国家会展中心带来多媒体展陈的全新体验",
+          date: "2023-05-29 ",
+          main:
+            "随着科技的不断进步，互动多媒体展陈已经逐渐成为展示文化、艺术、历史的重要手段之一。这种展陈方式可以将静态的文物与历史场景转化为生动的现场演示，通过多媒体、虚拟现实、互动体验等手段让观众在身临其境的情境中更好地感受到文化艺术的魅力。",
+          href:
+            "https://mp.weixin.qq.com/s?__biz=MzIwMDg4MDQyMA==&mid=2247485938&idx=1&sn=5e65bfb405675e367708f4449e494d5f&chksm=96f731b9a180b8af3668acfa47b79b864ed6b2f106cda41c0252e516e043a9d297e57bada881#rd",
+        },
+        {
+          img: "6-19-index-footer-card3",
+          title: "喜报！疆通科技入选​上海市人工智能行业协会会员单位",
+          date: "2023-05-05 ",
+          main:
+            "经过上海市人工智能行业协会的层层审核和综合评估，疆通科技成功入选协会会员单位。这标志着疆通科技在人工智能算法和大数据技术方面的能力获得了行业权威的认可。这是疆通科技的一项重要荣誉，也是对我司技术实力和专业水平的肯定。",
+          href:
+            "https://mp.weixin.qq.com/s?__biz=MzIwMDg4MDQyMA==&mid=2247485964&idx=1&sn=0bdd16a19cf18904edb3eaa268865ca7&chksm=96f73247a180bb519282a31d89d5c555a237b4a6ad0175390730944a489e69ffe6f362c64823#rd",
+        },
+        {
+          img: "6-19-index-footer-card4",
+          title: "热烈庆贺疆通科技顺利取得电子与智能化工程专业承包二级资质",
+          date: "2023-04-19 ",
+          main:
+            "建筑业是我国经济建设中的重要组成部分，也是一个不断发展和变革的行业。作为一家专注于数字化转型的科技公司，疆通科技一直致力于为建筑业合作伙伴提供一站式数字化转型服务，包括基于物联网技术的设备自主定制研发、人工智能自有知识产权算法的开发和应用等。",
+          href:
+            "https://mp.weixin.qq.com/s?__biz=MzIwMDg4MDQyMA==&mid=2247485977&idx=1&sn=d3b600f4a3e2e3cdb1854d529e512953&chksm=96f73252a180bb4484fb7854acade75cf323534ba9102e159d2cb5d5503132e3758da0b1fc0f#rd",
+        },
+        {
           img: "index-footer-card0",
           title: "疆通荣获西门子黑客松大赛最佳创意奖",
           date: "2023-04-13 ",
@@ -55,6 +91,52 @@ export default {
             "近日，由河北省工业和信息化厅指导，河北省保定市工业和信息化局主办，西门子(中国)有限公司、河北深保投资发展有限公司联合承办的西门子科技创新大赛暨“数字化触手可及”黑客马拉松圆满结束!",
           href: "https://mp.weixin.qq.com/s/_HaXXiRaoAJTwCrKNSWlDw",
         },
+        {
+          img: "6-19-index-footer-card5",
+          title: "祝贺！疆通科技荣获高新技术企业证书",
+          date: "2023-03-29",
+          main:
+            "2022年11月15日，上海市高新技术企业认定机构张告，公示《关于对上海市认定机构2022年认定的第二批高新技术企业进行备案公示的通知》。在上海市2022年度第二批高新技术企业名单中，上海疆通科技有限公司荣膺在列，光荣上榜。",
+          href:
+            "https://mp.weixin.qq.com/s?__biz=MzIwMDg4MDQyMA==&mid=2247485987&idx=1&sn=871ad95d3b004745b2e4a4af0651ce2c&chksm=96f73268a180bb7e747b0d1942416dea3929234a8641ada428f316ffd0c10a80f8252b993ef9#rd",
+        },
+        {
+          img: "6-19-index-footer-card6",
+          title: "恭贺疆通科技荣获ISO管理体系认证证书",
+          date: "2023-03-14 ",
+          main:
+            "经公司员工的勤奋付出以及专家们的严格指导和审核，上海疆通科技有限公司成功通过了ISO9001质量管理体系认证。",
+          href:
+            "https://mp.weixin.qq.com/s?__biz=MzIwMDg4MDQyMA==&mid=2247486005&idx=1&sn=b06b33807edeaeabbb90d0d82a01523d&chksm=96f7327ea180bb685f5090c223e20acc8f3bcb64db0c258bbc94438155a1eb551a9db11c51d6#rd",
+        },
+        {
+          img: "6-19-index-footer-card7",
+          title: "祝贺！三名员工荣获2023年人工智能职业技能证书",
+          date: "2023-02-24 ",
+          main:
+            "上海市人工智能行业协会发布了《人工智能训练师职业技能等级直接认定通过名单》，疆通科技有三位同事也在名单之列，顺利通过人工智能训练师技师（二级）、人工智能训练师（三级）认定。",
+          href:
+            "https://mp.weixin.qq.com/s?__biz=MzIwMDg4MDQyMA==&mid=2247486016&idx=1&sn=cee6534c922fa0b1efc9541d7a1e800a&chksm=96f7320ba180bb1d8083d47894ef4d2ab0492b14f6197247291a94b6ba368b6e0726bd17cd9f#rd",
+        },
+        {
+          img: "6-19-index-footer-card8",
+          title: "喜讯！祝贺疆通科技获得发明专利证书！",
+          date: "2023-02-10 ",
+          main:
+            "热烈祝贺疆通科技“无接触电梯控制方法及装置”发明专利获得国家知识产权局授权，并取得专利证书。",
+          href:
+            "https://mp.weixin.qq.com/s?__biz=MzIwMDg4MDQyMA==&mid=2247486041&idx=1&sn=c1d61447bea166fa891f0a2e706b3a2a&chksm=96f73212a180bb043236e56a62481d57812b1e3a40d2f2c8b0cc26cac1d158979d7369d5ca9c#rd",
+        },
+        {
+          img: "6-19-index-footer-card9",
+          title: "远程医疗,带你进入不一样的互联网世界",
+          date: "2023-01-20 ",
+          main:
+            "近年来，随着信息技术的不断发展和医疗需求的不断增长，远程医疗逐渐成为一个备受关注的领域。远程医疗作为一种新的医疗模式，通过网络、通讯技术等手段，实现了医生和患者之间的交流和诊疗，具有时间灵活、距离无限、成本低等优点，为广大患者提供了更便捷、高效、个性化的医疗服务。",
+          href:
+            "https://mp.weixin.qq.com/s?__biz=MzIwMDg4MDQyMA==&mid=2247486089&idx=1&sn=8847cb7869aeed5844da22e044a864d5&chksm=96f732c2a180bbd418e4ef62d7cee860a9f2b36e7d44b229fe96f3d173bdf40bfb857fbbe1e2#rd",
+        },
+
         {
           img: "index-footer-card1",
           title: "科技挽救生命，AR技术让急救加速",
@@ -139,6 +221,14 @@ export default {
           href: "https://mp.weixin.qq.com/s/o5q5HJhWO5TwVhIy49E4Jg",
         },
         {
+          img: "index-footer-card10",
+          title: "一起来刷题（人工智能+物联网）",
+          date: " 2020-03-27",
+          main:
+            "往期文章也为大家普及了相关物联网与人工智能的应用。今天来验收一下成果，大家可以识别下图的二维码，共20道单选题。 ( ᖛ ̫ ᖛ )ʃ)   ",
+          href: "https://mp.weixin.qq.com/s/e970zN-_RPVy1yfARttFIQ",
+        },
+        {
           img: "index-footer-card6",
           title: `ZigBee or WI-Fi？`,
           date: " 2019-07-19",
@@ -154,14 +244,7 @@ export default {
             "物联网（ IoT ，Internet of things ）即“万物相连的互联网”，是互联网基础上的延伸和扩展的网络，将各种信息传感设备与互联网结合起来而形成的一个巨大网络，实现在任何时间、任何地点，人、机、物的互联互通。",
           href: "https://mp.weixin.qq.com/s/ldWD_JRRKKXFCZyJVU_5Rw",
         },
-        {
-          img: "index-footer-card10",
-          title: "一起来刷题（人工智能+物联网）",
-          date: " 2020-03-27",
-          main:
-            "往期文章也为大家普及了相关物联网与人工智能的应用。今天来验收一下成果，大家可以识别下图的二维码，共20道单选题。 ( ᖛ ̫ ᖛ )ʃ)   ",
-          href: "https://mp.weixin.qq.com/s/e970zN-_RPVy1yfARttFIQ",
-        },
+
         {
           img: "index-footer-card17",
           title: "科技公司里面是啥样的？",
@@ -179,11 +262,6 @@ export default {
     const left = document.getElementsByClassName("leftBtn");
     const right = document.getElementsByClassName("rightBtn");
     const w = document.documentElement.clientWidth;
-
-    // if (w < 500) {
-    //   row.style.width = "280%";
-    //   this.speed = 10;
-    // }
     const wrapper = document.getElementsByClassName("wrapper")[0]; // 容器
     const text = document.getElementsByClassName("wrapper-row")[0]; // 文本
     const wrapperWidth = wrapper.clientWidth; // 容器的总宽度
