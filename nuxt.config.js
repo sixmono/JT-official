@@ -15,6 +15,7 @@ export default {
     title: "上海疆通科技有限公司",
     meta: [
       { charset: "utf-8" },
+      { name:"测试"},
       { name: "baidu-site-verification", content: "codeva-PT3yV321fk" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
