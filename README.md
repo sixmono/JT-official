@@ -1,7 +1,7 @@
 # nuxtapp
 
 ## Build Setup
-
+<!-- 猴子上传的文档 -->
 ```bash
 # install dependencies
 $ npm install
