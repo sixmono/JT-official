@@ -9,7 +9,7 @@ export default {
     },
     meta: [
       { charset: "utf-8" },
-      { name:"baidu-site-verification", content:"codeva-PT3yV321fk"},
+      {  name:"baidu-site-verification", content:"codeva-PT3yV321fk"},
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
