@@ -96,6 +96,18 @@ export default {
       this.isShow = true;
     },
   },
+  head() {
+    return {
+      title: "Home Page",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Home page description",
+        },
+      ],
+    };
+  },
 };
 </script>
 
