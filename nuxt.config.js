@@ -8,7 +8,27 @@ export default {
        const ara= cheerio.load(result.html,{decodeEntities: false});
        ara(`meta`).removeAttr('data-n-head');
        result.html = ara.html()
-     }
+     },
+     generate: {
+      page(page) {
+        const cheerio = require("cheerio");
+        const $ = cheerio.load(page.html, { decodeEntities: false });
+ 
+        const attrs = [
+          "data-n-head-ssr",
+          "data-n-head",
+          "data-hid",
+          "data-vue-ssr-id",
+          "data-server-rendered"
+        ];
+ 
+        attrs.forEach(value => {
+          $("*[" + value + "]").removeAttr(value);
+        });
+        
+        page.html = $.html();
+      }
+    }
    },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
